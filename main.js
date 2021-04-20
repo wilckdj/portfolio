@@ -2,15 +2,21 @@ const links = [
     {
         label:"Week1 notes",
         url: "week1/index.html"
-    }
+    },
+/*    {
+        label:"Week2 notes",
+        url: "week2/index.html"
+    }*/
 ]
 
     var toc = document.getElementById("content")
     for (let i = 0; i<links.length; i++) {
         var item = document.createElement("li");
+        var a = document.createElement("a");
         //item.appendChild(document.createTextNode(links[i].label));
-        item.textContent = links[i].label
-        item.setAttribute('href', links[i].url);
+        a.textContent = links[i].label
+        a.setAttribute('href', links[i].url);
+        item.appendChild(a);
         toc.appendChild(item);
         console.log (i);
     }
