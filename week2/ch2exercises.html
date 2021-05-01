@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 Chapter 2</title>
+    <script>
+        const name = "Joseph";
+
+        let x = 5,
+            y = 6,
+            z = 7;
+
+        /*
+        let name = "Mitch"
+        console reports: Uncaught SyntaxError: Identifier 'name' has already been declared
+        */
+        const lastName = {
+            value: "Bart"
+        };
+        lastName.value = "Clark";
+
+        x = 1
+        console.log("x = " + x)
+        //Scope tests
+        {
+            const a = 2; {
+                const a = 3;
+                console.log("a = " + a);
+            }
+            console.log("a = " + a)
+        }
+
+        {
+            x = 7;
+            console.log("x = " + x);
+        }
+
+        console.log("x = " + x);
+
+        console.log(parseInt("5000ABC")) // returns 5000
+
+        //Template Literals
+        console.log(`Hello ${ name }!`)
+        console.log(`x = ${x}`)
+        console.log(`this is a backtick: \` `)
+        console.log(`This line has a dramatic...
+        
+        
+        pause.`)
+    </script>
+    <style></style>
+</head>
+
+<body>
+    <H1>
+        WDD 330 Portfolio
+    </H1>
+    <h2>Week 2 Notes</h2>
+    <H3>Chapter 2</H3>
+    <ul>
+        <li>
+            There are seven data types: String, Symbol, Number, Boolean, Undefined, Null, Object.
+            <ul>
+                <li>
+                    All Non-primitive data types return a type of object.
+                </li>
+            </ul>
+        </li>
+        <li>
+            To declare variables, use 'const' or 'let'.
+            <ul>
+                <li>
+                    <i>const</i> is used for variables that are not going to be re-assigned to another value. Example:
+                    const name = "joseph", name will always be "joseph"
+                </li>
+                <li>
+                    <i>const</i> for non-primitive data types is changable, such as changing the values in a const
+                    array.
+                </li>
+                <li>
+                    <i>let</i> is used for variables that might be reassigned later. Example: let X = 5, X = 4
+                </li>
+                <li>
+                    <i>var</i> should no longer used, but still works for backwards compatibility.
+                </li>
+            </ul>
+        </li>
+        <li>
+            const and let variables only exist inside the block they are declared in.
+        </li>
+        <li>
+            Global Scope is when a variable is declared outside of a block, and is accesible from anywhere in the
+            program.
+        </li>
+        <li>
+            Local Scope is when a variable is declared inside a block, {}.
+        </li>
+        <li>
+            The same variable name can have different values depending on the scope it is declared in.
+            <ul>
+                <li>
+                    You can declare a global variable from inside a block if you don't use let or const.
+                </li>
+            </ul>
+        </li>
+        <li>
+            The best ways to convert data types is to use the corresponding function:
+            <ul>
+                <li>
+                    Number('100'); - Converts string to a number
+                </li>
+                <li>
+                    String(100) - Converts number to a string
+                </li>
+                <li>
+                    .toString() method - converts to number, the base can be specified.
+                </li>
+            </ul>
+        </li>
+        <li>
+            Parsing numbers, instead of converting, can be done using parseINT() or parseFloat()
+            <ul>
+                <li>
+                    parseInt() is for integers and can also specify the base that you are converting.
+                </li>
+                <li>
+                    parseFloat() is for floating point decimals.
+                </li>
+            </ul>
+        </li>
+        <li>
+            Template Literals use the backtick ` to deliminate the string. `Hello` instead of 'Hello'
+        </li>
+        <li>
+            You can put javascript expression inside a string that will show the result instead of the script. 
+        </li>
+    </ul>
+
+    <Footer>
+        <a href="index.html">Return to Week 2</a>
+    </Footer>
+</body>
+
+</html>

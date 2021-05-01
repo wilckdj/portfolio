@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 Chapter 4</title>
+    <script>
+        console.log("The following functions were made: multiply, square, multiplication, multiplyArrow, noise, source, numerically.")
+        function multiply(x, y) {
+            return x * y
+        }
+
+        function square(x) {
+            return x * x
+        }
+
+        function multiplication(...values) {
+            let total = 1
+            for (const value of values) {
+                total *= value;
+            }
+            return total
+        }
+        const multiplyArrow = (x, y) => x * y;
+
+        function noise(sound, source) {
+            return `that noise sounded like a ${sound}.` + ` ` + source();
+        }
+
+        function source() {
+            return `It came from over there.`
+        }
+
+
+
+        function numerically(a, b) {
+            return a - b;
+        }
+    </script>
+    <style></style>
+</head>
+
+<body>
+    <H1>
+        WDD 330 Portfolio
+    </H1>
+    <h2>Week 2 Notes</h2>
+    <H3>Chapter 4</H3>
+    <p>Function examples are available in the console.</p>
+    <ul>
+        <li>
+            Functions can be defined in at least three ways
+            <ol>
+                <li>
+                    Function declaration: function hello() {}
+                </li>
+                <li>
+                    Function expression: const goodbye = function(){}; const goodbye = function bye(){}
+                </li>
+                <li>
+                    Arrow functions: const square = x => x*x
+                </li>
+            </ol>
+        </li>
+        <li>
+            Every function has a name, for anonymous functions the name is empty or undefined.
+        </li>
+        <li>
+            Functions can be declared with the constructor Function(): const hi = new Function('...'); but it isn't the
+            best method.
+        </li>
+        <li>
+            Functions are invoked (called) by typing its name followed by parenthesis: hello()
+        </li>
+        <li>
+            DRY means "Don't Repeat Yourself", meaning code should not be duplicated but instead only written once.
+        </li>
+        <li>
+            For a function to return a value, you must include the return keyword and the value being returned in the
+            function: return "Hello World.";
+        </li>
+        <li>
+            Parameters are the specified values that a function uses, arguments are the values provided for the
+            parameters.
+        </li>
+        <li>
+            There will probably be rounding errors with these functions, but it shouldn't cause too much of a problem.
+        </li>
+        <li>
+            Functions can have a variable number of arguments.
+            <ul>
+                <li>
+                    Each function has an arguments variable, it isn't an array but it has a length property.
+                </li>
+                <li>
+                    the better option is to use the rest operator: '...'. Place the three dots before the last parameter
+                    in the declaration.
+                </li>
+            </ul>
+        </li>
+        <li>
+            Default parameters can be specified: function hello(name = 'World'){}
+        </li>
+        <li>
+            Arrow functions: Parameters come before the arrow, body comes after. They are always anonymous so must be
+            assigned to a variable if you want to refer to them.
+        </li>
+        <li>
+            If arrow function has no parameters, empty parenthesis must come before the arrow: const hello = () =>
+            alert('Hello World');
+        </li>
+        <li>
+            Longer arrow functions require curly braces and the return keyword
+        </li>
+        <li>
+            Hoisting is when the javascript interpreter moves function and variable <u>declarations</u> to the top of
+            the current scope.
+        </li>
+        <li>
+            Function Hoisting is where the function can be called at the top, and the declaration can be at the bottom,
+            but it still works okay.
+        </li>
+        <li>
+            Variable Hoisting only works with the var keyword, so if you are going to use let or const it must be
+            declared at the top of the scope.
+        </li>
+        <li>
+            Callbacks are when a function is passed as an argument to another function.
+        </li>
+        <li>
+            Javascript can't define a parameter as a callback, so you can use an if statement to only run the function
+            if a function name is provided: if(typeof(callback) === 'function'){...}
+        </li>
+        <li>
+            You can use a callback to improve the functionality of the sort() method for arrays.
+        </li>
+        <li>
+            Arrow Iterators: Arrow functions can use callbacks with their methods.
+        </li>
+        <li>
+            forEach(): like a for loop, but goes through each item in an array and can invoke a callback function. 
+        </li>
+        <li>
+            map(): similary to forEach(), but returns a new array with the results. 
+        </li>
+        <li>
+            Reduce(): also goes through each value of an array, but cumulatively combines them to return a single value. 
+        </li>
+        <li>
+            Filter(): acts like a filter, goes through an array of values and returns the values that return true when passed through a callback.
+        </li>
+        <li>
+            Because some of these iterator methods return an array, other iterators can be chained on to it to perform their action on the resulting array. 
+        </li>
+    </ul>
+
+    <Footer>
+        <a href="index.html">Return to Week 2</a>
+    </Footer>
+</body>
+
+</html>

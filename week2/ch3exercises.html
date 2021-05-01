@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 Chapter 3</title>
+    <script>
+        //to create an array
+        let heroes = [];
+
+        //to assign values to specific parts of an array
+        heroes[0] = 'Superman';
+        console.log(heroes[0])
+        heroes[0] = "Batman";
+        heroes[1] = "Wonder Woman";
+        heroes[2] = "Flash";
+        heroes[5] = 'Aquaman';
+        console.log(heroes);
+        let avengers = ['Captain America', 'Iron Man', 'Thor', 'Hulk'];
+        console.log(avengers);
+
+        //arrays can have mixed datatypes
+        let mixedArray = [null, 1, [], 'two', true];
+        console.log(mixedArray);
+
+        // deleting a value of an array leaves an empty spot.
+        delete avengers[3];
+        console.log(avengers);
+
+        //arrays can assign multiple values to variables.
+        let [x, y] = [1, 2];
+        console.log(x, y);
+
+        [x, y] = [y, x];
+        console.log(x, y);
+
+        avengers = ['Captain America', 'Iron Man', 'Thor', 'Hulk', 'Hawkeye', 'Black Widow'];
+
+        //get how long an array is with .length, or assign a length. 
+        console.log(avengers.length);
+        console.log(avengers[avengers.length - 1]);
+        avengers.length = 8;
+        console.log(avengers);
+        avengers.length = 3;
+        console.log(avengers);
+
+        //remove the last value with .pop()
+        avengers.pop();
+        console.log(avengers);
+
+        //remove the first value with .shift()
+        avengers.shift();
+        console.log(avengers);
+
+        //add a value to the end with .push()
+        avengers.push("Thor");
+        console.log(avengers);
+
+        //add a value to the beginning with .unshift()
+        avengers.unshift("Captain America");
+        console.log(avengers);
+
+        //combine arrays with .concat()
+        avengers = avengers.concat(["Hulk", "Hawkeye", "Black Widow"]);
+        console.log(avengers);
+
+        //.join allows the array to combine into a string.
+        console.log(avengers.join());
+        console.log(avengers.join(" & "));
+
+        //slice() creates a subarray - nondestructive. 
+        console.log(avengers.slice(2, 4));
+
+        //splice() can remove, insert values into an array at specific points. 
+        avengers.splice(3, 1, 'Scarlet Witch');
+        console.log(avengers);
+        avengers.splice(4, 0, 'Quicksilver');
+        console.log(avengers);
+        avengers.splice(2, 1);
+        console.log(avengers);
+
+        //reverse() shows the array in opposite order
+        console.log(avengers.reverse());
+
+        //sort() sorts an array alphabetically
+        console.log(avengers.sort());
+
+        //indexOf() and includes() can be used to check arrays for specific values. 
+        console.log(avengers.indexOf('Iron Man'));
+        console.log(avengers.indexOf("Thor"));
+        console.log(avengers.includes('Iron Man'));
+        console.log(avengers.includes('Black Widow', 1));
+
+        //you can create nested arrays, or arrays within arrays. 
+        let coordinates = [
+            [1, 3],
+            [4, 2]
+        ];
+        console.log(coordinates);
+
+        let summer = ['Jun', 'Jul', 'Aug'];
+        let winter = ['Dec', 'Jan', 'Feb'];
+        let nested = [summer, winter];
+
+        console.log(nested);
+
+        //you can combine arrays with the spread indicator '...'
+        let flat = [...summer, ...winter];
+        console.log(flat)
+
+        
+        //Sets - Only contain unique values;
+        console.log("The next logs will be regarding 'Sets'");
+        let list = new Set();
+
+        //add values to sets with .add()
+        list.add(1);
+        console.log(list)
+
+        list.add(2).add(3).add(4);
+        console.log(list)
+
+        //adding values to sets that already exist is ignored. 
+
+        let numbers = new Set([1, 2, 3]);
+        let moreNumbers = new Set([7, 7, 7, 7, 7, 8, 8, 8, 9, 9]);
+        console.log(numbers);
+        console.log(moreNumbers);
+        let letters = new Set('Mississippi');
+        console.log(letters);
+        let sentence = new Set("This is a sentence.");
+        console.log(sentence);
+        let words = new Set().add("The").add("quick").add("brown").add("fox");
+        console.log(words)
+        let words2 = new Set().add("The").add("quick brown").add("fox");
+        console.log(words2);
+
+        let arrays = new Set().add([1]).add([1]);
+        console.log(arrays);
+
+        //sets use .size instead of .length, and .has() instead of .includes() or .indexOf()
+        console.log(words.size);
+        console.log(words.has("brown"));
+
+        //convert sets to arrays
+        let wordArray = [...words];
+        console.log(wordArray);
+
+        //Maps - Convienient for keeping a list of key and value pairs. 
+        console.log("The next logs will be regarding 'Maps'");
+
+        let romanNumerals = new Map();
+
+        //add values using .set(key,value)
+        romanNumerals.set(1,'I');
+        console.log(romanNumerals);
+        romanNumerals.set(2,'II').set(3,'III').set(4,'IV').set(5,'V');
+        console.log(romanNumerals);
+
+        //lookup values with .get()
+        console.log(romanNumerals.get(4))
+
+        //check for a key with .has()
+        console.log(romanNumerals.has(5));
+        
+        //remove entries with .delete()
+        //convert maps to arrays
+        let romanNumeralsArray = [...romanNumerals]
+        console.log(romanNumeralsArray);
+
+    </script>
+    <style></style>
+</head>
+
+<body>
+    <H1>
+        WDD 330 Portfolio
+    </H1>
+    <h2>Week 2 Notes</h2>
+    <H3>Chapter 3</H3>
+
+    <p>For this chapter I focused on following the example. My work is recorded in the console log and in code comments.
+    </p>
+
+    <Footer>
+        <a href="index.html">Return to Week 2</a>
+    </Footer>
+</body>
+
+</html>
