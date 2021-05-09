@@ -104,6 +104,5 @@ console.log('Clicked on li'),true);*/
 /*liElement.addEventListener('click', (event) => {
     console.log('clicked on li');
     event.stopPropagation(); }, false);*/
-s
 //events can be delegated to children elements
 ulElement.addEventListener('click',highlight);
