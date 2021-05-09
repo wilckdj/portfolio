@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 Chapter 5</title>
+    <script>
+        const superman = {
+            name: 'Superman',
+            'real name': 'Clark Kent',
+            height: 75,
+            weight: 235,
+            hero: true,
+            villain: false,
+            allies: ['Batman', 'Supergirl', 'Superboy'],
+            fly() {
+                return 'Up, up and away!';
+            }
+        };
+
+        //console.table(superman.allies);
+        console.log(superman.allies)
+        console.log('hero' in superman);
+
+        /*for (const key in superman) {
+            console.log(key + ": " + superman[key]);
+        }*/
+        //console.table(superman)
+        for (const key of Object.keys(superman)) {
+            console.log(key);
+        }
+        //console.table(Object.keys(superman));
+        for (const [key, value] of Object.entries(superman)) {
+            console.log(`${key}: ${value}`);
+        }
+        superman.city = 'Metropolis';
+        superman['real name'] = 'Kal-El';
+
+        const jla = {
+            superman: {
+                realName: 'Clark Kent'
+            },
+            batman: {
+                realName: 'Bruce Wayne'
+            },
+            wonderWoman: {
+                realName: 'Diana Prince'
+            },
+            flash: {
+                realName: 'Barry Allen'
+            },
+            aquaman: {
+                realName: 'Arthur Curry'
+            },
+        }
+
+        /*function greet({greeting, name, age}) {
+            return `${greeting}! My name is ${name} and I am ${age} years old.`;
+        }*/
+        function greet({
+            greeting = 'Hello',
+            name,
+            age = 18
+        }) {
+            return `${greeting}! My name is ${name} and I am ${age} years old.`;
+        }
+
+        /*const dice = {
+            sides: 6,
+            roll() {
+                return Math.floor(this.sides * Math.random()) + 1;
+            }
+        }*/
+
+        const dice = {
+            d4: {
+                sides: 4,
+                roll() {
+                    return Math.floor(this.sides * Math.random()) + 1;
+                }
+            },
+            d6: {
+                sides: 6,
+                roll() {
+                    return Math.floor(this.sides * Math.random()) + 1;
+                }
+            },
+            d8: {
+                sides: 8,
+                roll() {
+                    return Math.floor(this.sides * Math.random()) + 1;
+                }
+            },
+            d10: {
+                sides: 10,
+                roll() {
+                    return Math.floor(this.sides * Math.random()) + 1;
+                }
+            },
+            d12: {
+                sides: 12,
+                roll() {
+                    return Math.floor(this.sides * Math.random()) + 1;
+                }
+            },
+            d20: {
+                sides: 20,
+                roll() {
+                    return Math.floor(this.sides * Math.random()) + 1;
+                }
+            },
+            d100: {
+                sides: 10,
+                roll() {
+                    return (Math.floor(this.sides * Math.random()) + 1) * 10;
+                }
+            },
+        }
+    </script>
+    <style></style>
+</head>
+
+<body>
+    <H1>
+        WDD 330 Portfolio
+    </H1>
+    <h2>Week 3 Notes</h2>
+    <H3>Chapter 5</H3>
+
+    <p>Some examples are in the console and code comments. </p>
+    <ul>
+        <li>
+            Objects are self-contained sets of related values and functions.
+        </li>
+        <li>
+            Objects are used to keep related inforamtion and functionality together.
+        </li>
+        <li>
+            object properties that don't follow naming rules need to be quoted:
+            <ul>
+                <li>
+                    name: 'Superman',
+                </li>
+                <li>
+                    'real name': 'Clark Kent',
+                </li>
+                <li>realName: 'Clark Kent'</li>
+            </ul>
+        </li>
+        <li>
+            Create an object literal as follows: const spiderman = {};
+        </li>
+        <li>
+            there is a shorthand method of creating objects, if the property key is the same as a variable name:
+            <ul>
+                <li>
+                    long: const ironMan = { name: name, realName: realName };
+                </li>
+                <li>
+                    short: const ironMan = { name, realName };
+                </li>
+            </ul>
+        </li>
+        <li>
+            Properties can be accessed two ways: superman.name -or- superman['name']
+        </li>
+        <li>
+            Computed property keys can be assigned with square brackets. ['catch' + 'Phrase'] becomes catchPhrase.
+        </li>
+        <li>
+            Property values can be experessions. {hero: bewitched ? false : true}
+        </li>
+        <li>
+            Methods can be called in two ways: superman.fly() -or- superman['fly']()
+        </li>
+        <li>
+            The 'in' operator can check whether an object has a property.
+        </li>
+        <li>
+            You can use for loops to cycle through all of the object's keys/values.
+        </li>
+        <li>
+            New properties are added by assigning a value to the property: superman.city = 'Metropolis'
+        </li>
+        <li>
+            Properties can be changed by updating the value: superman['real name'] = 'Kal-El';
+        </li>
+        <li>
+            Propertied are removed by using the delete operator: delete superman.fly
+        </li>
+        <li>
+            You can create nested objects, or objects that contain other objects.
+        </li>
+        <li>
+            Nested objects are accessed by referencing each property name in order: jla.wonderWoman.realName
+        </li>
+        <li>
+            Object literals can be passed as a parmeter to a function.
+        </li>
+        <li>
+            The keyword "this" refers to the object that it is within.
+        </li>
+        <li>
+            Putting functions that relate to each other inside an object is referred to as creating a namespace for
+            them.
+        </li>
+        <li>
+            JSON: JavaScript Object Notation, property names must be double-quoted, functions are not permitted values.
+            <ul>
+                <li>
+                    .parse() takes a string of JSON and returns the Javascript object.
+                </li>
+                <li>
+                    .stringify() takes the JavaScript object and returns a string of JSON data.
+                </li>
+            </ul>
+        </li>
+        <li>
+            The Math object is built-in and has several properties for mathematical constants and methods.
+        </li>
+        <li>
+            The Date object contains information about dates and times and has several methods. 
+        </li>
+        <li>
+            The RegExp object is a pattern used to search strings for matches. 
+        </li>
+    </ul>
+    
+
+    <Footer>
+        <a href="index.html">Return to Week 3</a>
+    </Footer>
+</body>
+
+</html>
