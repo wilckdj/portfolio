@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 Chapter 8</title>
+    <script>
+
+    </script>
+    <style></style>
+</head>
+
+<body>
+    <H1>
+        WDD 330 Portfolio
+    </H1>
+    <h2>Week 4 Notes</h2>
+    <H3>Chapter 8</H3>
+    <ol>
+        <li>
+            <a href="search.html">search.html</a> - Textbook Example 1
+        </li>
+        <li>
+            <a href="hero.html">hero.html</a> - Textbook Example 2
+        </li>
+    </ol>
+    
+    
+
+
+    <ul>
+        <li>
+            Forms generally submit information to be processed on the back end, but can be also processed on the front
+            end.
+        </li>
+        <li>
+            Forms can be selected with JavaScript using form = document.forms[#],
+            document.getElementsByTagname('form')[#], or document.forms.name.
+            <ul>
+                <li>
+                    The ideal method is: document.forms['name'];
+                </li>
+            </ul>
+        </li>
+        <li>
+            The form elements can can be access/assigned through form.elements or form.name / form['name']
+        </li>
+        <li>
+            form.submit() will submit the form automatically.
+        </li>
+        <li>
+            forms can also be submitted manually by a button or input element with the submit type.
+        </li>
+        <li>
+            form.reset() will reset all the form controls back to initial values.
+        </li>
+        <li>
+            A button with a type of 'reset' will also reset the form.
+        </li>
+        <li>
+            form.action can be used to set the action attribut of a form so its sent to another URL for server
+            processing.
+        </li>
+        <li>
+            Focus events occur when an element of a form is focused on.
+        </li>
+        <li>
+            Blur events occur when focus moves away from a form element.
+        </li>
+        <li>
+            Change events occur when the element is changed and the focus leaves the element.
+        </li>
+        <li>
+            Submit events occure when the form is submitted, usually to send the content to the server.
+        </li>
+        <li>
+            Javascript can intercept the form before it is sent using a submit event listener.
+        </li>
+        <li>
+            preventDefault() can stop the submission from being sent.
+        </li>
+        <li>
+            You can establish a default value for the input using input.value = "";
+        </li>
+        <li>
+            You can use focus and blur event listeners to clear and add a default value such as "Search Here".
+        </li>
+        <li>
+            An alternative is to use the placeholder attribute, but it doesn't act as a value for submission.
+        </li>
+        <li>
+            Common fom controls are: input, select, textarea, and button.
+        </li>
+        <li>
+            The input element includes attirbutes such as autofocus, placeholder, and maxlength.
+        </li>
+        <li>
+            There are multiple types of input fields: 
+            <ul>
+                <li>
+                    'text' is the default, for typing in short pieces of text
+                </li>
+                <li>
+                    'password' is like text but conceals the characters for secret information. 
+                </li>
+                <li>
+                    'checkbox' is for true or false values.
+                </li>
+                <li>
+                    'radio' is for exclusive choices, where only one can be selected. 
+                </li>
+                <li>
+                    'hidden' is for values that do not need to be displayed but should be submitted with the form, not secure. 
+                </li>
+                <li>
+                    'file' is for uploading files.
+                </li>
+                <li>
+                    others such as 'number', 'tel', 'color', 'date'
+                </li>
+            </ul>
+        </li>
+        <li>
+            Select Drop-Down Lists are used for choosing options from a list of values. 
+            <ul>
+                <li>
+                    The 'selected' attribute indicates which options value is used. 
+                </li>
+                <li>
+                    The 'selectedIndex' property returns the numeric index of the option selected. 
+                </li>
+                <li>
+                    the 'multiple' attribute is needed if more than one option will be selected. 
+                </li>
+            </ul>
+        </li>
+        <li>
+            'textarea' elements are used to enter longer text, and can be over multiple lines. 
+        </li>
+        <li>
+            There are multiple types of buttons: 'submit', 'reset', 'button', 'menu'
+        </li>
+        <li>
+            Form validation includes checking for certain values before allowing it the form to submit. 
+        </li>
+        <li>
+            Submit buttons can have the 'disabled' attribute. 
+        </li>
+    </ul>
+
+
+
+    <Footer>
+        <a href="index.html">Return to Week 3</a>
+    </Footer>
+</body>
+
+</html>
