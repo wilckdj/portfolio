@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 Chapter 12</title>
+    <script>
+        const dice = {
+            sides: 6,
+            roll() {
+                return Math.floor(this.sides * Math.random() + 1)
+            }
+        }
+        /*const Dice = function (sides = 6) {
+            this.sides = sides;
+            this.roll = function () {
+                return Math.floor(this.sides * Math.random() + 1)
+            }
+        }*/
+
+        class Dice {
+            constructor(sides = 6) {
+                this.sides = sides;
+            }
+            roll() {
+                return Math.floor(this.sides * Math.random() + 1)
+            }
+            static description() {
+                return 'A way of choosing random numbers'
+            }
+        }
+        const redDice = new Dice();
+        const blueDice = new Dice(20);
+        const greenDice = new redDice.constructor(10);
+
+        class Turtle {
+            constructor(name, color) {
+                this.name = name;
+                let _color = color;
+                this.setColor = color => {
+                    return _color = color;
+                }
+                this.getColor = () => _color;
+
+                //this.weapon = 'hands';
+            }
+            sayHi() {
+                return `Hi dude, my name is ${this.name}`;
+            }
+            /*attack() {
+                return `Feel the power of my ${this.weapon}!`;
+            }*/
+        }
+
+        const leo = new Turtle('Leonardo');
+
+        Turtle.prototype.weapon = 'Hands';
+        Turtle.prototype.attack = function () {
+            return `Feel the power of my ${this.weapon}!`;
+        }
+
+        const raph = new Turtle('Raphael', 'Red');
+        const don = new Turtle('Donatello');
+        leo.weapon = 'Katana Blades';
+        raph.weapon = 'Sai';
+        don.weapon = 'Bo Staff';
+        Turtle.prototype.food = 'Pizza';
+        Turtle.prototype.eat = function () {
+            return `Mmm, this ${this.food} tastes great!`;
+        }
+        const mike = new Turtle('Michelangelo');
+        mike.weapon = 'Nunchakus';
+    </script>
+    <style></style>
+</head>
+
+<body>
+    <H1>
+        WDD 330 Portfolio
+    </H1>
+    <h2>Week 4 Notes</h2>
+    <H3>Chapter 12</H3>
+
+    <p>Some examples are in the console and code comments. </p>
+
+    <ul>
+        <li>
+            Object-Oriented Programming (OOP) is often used to model representations of objects in the real world.
+        </li>
+        <li>
+            OOP has three main concepts: encapsulation, polymorphism, and inheritance.
+        </li>
+        <li>
+            Encapsulation: The inner workings are kept hidden inside the object and the essential functions are exposed
+            to the end user.
+        </li>
+        <li>
+            Polymorphism: The same process can be used for different objects, or various objects can share methods.
+        </li>
+        <li>
+            Inheritance: Taking the features of one object then adding some new features.
+        </li>
+        <li>
+            Unlike Java and Ruby that are class-based languages, JavaScript is a prototype-based language.
+        </li>
+        <li>
+            Constructor Functions can be used when creating objects to define the properties and methods of an object.
+        </li>
+        <li>
+            With contructor functions, you can creat new instances using the 'new' operator.
+        </li>
+        <li>
+            You can create constructor functions or use the built-in constructor functions.
+        </li>
+        <li>
+            JavaScript ES6 introduces the class declaration which does the same thing as a constuctor function, but is
+            similar to writing a class in other programming languages.
+        </li>
+        <li>
+            It is good practice to capitalize constructor function names.
+        </li>
+        <li>
+            ES6 class declarations are preferable to the constructor function because they are easier to read and is
+            implicitly in strict mode.
+        </li>
+        <li>
+            All objects have a constructor property that returns the constructor function that created it.
+        </li>
+        <li>
+            If you don't know the name of an objects constructor, you can use the constructor property to instantiate a
+            copy.
+            <ul>
+                <li>
+                    ex: const greenDice = new redDice.constructor(10);
+                </li>
+            </ul>
+        </li>
+        <li>
+            The static keyword can be used to create a static method, which can only be called from the class directly
+            and not from instances.
+        </li>
+        <li>
+            Javascript uses prototypal inheritance, every class has a prototype property shared by every instance.
+        </li>
+        <li>
+            If you want to add things to the class affter it is created, you can use the prototype property of the
+            class.
+        </li>
+        <li>
+            Properties that are inherited from the prototype porperty are not the object's own property.
+        </li>
+        <li>
+            The prototype object is live, so other instances of a class inherit new properties and methods
+            automatically.
+        </li>
+        <li>
+            You can overwrite properties and methods inherited from an object's prototype by assigning a new value to
+            them.
+        </li>
+        <li>
+            Prototype should be used to define any properties that will remain the same for every instance of the class.
+        </li>
+        <li>
+            Object methods in JavaScript are public by default, meaning they can be queried and changed by assignment.
+        </li>
+        <li>
+            Using variable scope, some properties and methods can be kept private inside of a class declaration.
+        </li>
+        <li>
+            Because a prototype is just another object, it has its own prototype, which has a prototype, causing a chain. 
+        </li>
+        <li>
+            
+        </li>
+
+    </ul>
+
+    <Footer>
+        <a href="index.html">Return to Week 3</a>
+    </Footer>
+</body>
+
+</html>
