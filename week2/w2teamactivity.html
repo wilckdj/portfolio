@@ -5,6 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Activity 2</title>
+
+</head>
+<body>
+    
+    <input type="text" id="inputID">
+    
+    <button onclick="addingMachine(inputID.value, inputID2.value)">+</button>
+    <button onclick="divide(inputID.value, inputID2.value)">/</button>
+    <button onclick="multiply(inputID.value, inputID2.value)">*</button>
+    
+    <input type="text" id="inputID2">
+    
+
+    <button onclick="number2(inputID.value)">Get Button</button>
+
+    <div id="divID"></div>
+
+    <div id="addingAnswer"></div>
+
+    <button onclick="number2(inputID.value)">Get Button</button>
+
+
+    <Footer>
+        <a href="index.html">Return to Week 2</a>
+    </Footer>
     <script>
         function getInput(){
             document.getElementById("divID").innerHTML = document.getElementById("inputID").value;
@@ -50,29 +75,5 @@
         }*/
 
     </script>
-</head>
-<body>
-    
-    <input type="text" id="inputID">
-    
-    <button onclick="addingMachine(inputID.value, inputID2.value)">+</button>
-    <button onclick="divide(inputID.value, inputID2.value)">/</button>
-    <button onclick="multiply(inputID.value, inputID2.value)">*</button>
-    
-    <input type="text" id="inputID2">
-    
-
-    <button onclick="number2(inputID.value)">Get Button</button>
-
-    <div id="divID"></div>
-
-    <div id="addingAnswer"></div>
-
-    <button onclick="number2(inputID.value)">Get Button</button>
-
-
-    <Footer>
-        <a href="index.html">Return to Week 2</a>
-    </Footer>
 </body>
 </html>

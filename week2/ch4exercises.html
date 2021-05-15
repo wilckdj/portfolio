@@ -6,39 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 2 Chapter 4</title>
-    <script>
-        console.log("The following functions were made: multiply, square, multiplication, multiplyArrow, noise, source, numerically.")
-        function multiply(x, y) {
-            return x * y
-        }
 
-        function square(x) {
-            return x * x
-        }
-
-        function multiplication(...values) {
-            let total = 1
-            for (const value of values) {
-                total *= value;
-            }
-            return total
-        }
-        const multiplyArrow = (x, y) => x * y;
-
-        function noise(sound, source) {
-            return `that noise sounded like a ${sound}.` + ` ` + source();
-        }
-
-        function source() {
-            return `It came from over there.`
-        }
-
-
-
-        function numerically(a, b) {
-            return a - b;
-        }
-    </script>
     <style></style>
 </head>
 
@@ -140,25 +108,63 @@
             Arrow Iterators: Arrow functions can use callbacks with their methods.
         </li>
         <li>
-            forEach(): like a for loop, but goes through each item in an array and can invoke a callback function. 
+            forEach(): like a for loop, but goes through each item in an array and can invoke a callback function.
         </li>
         <li>
-            map(): similary to forEach(), but returns a new array with the results. 
+            map(): similary to forEach(), but returns a new array with the results.
         </li>
         <li>
-            Reduce(): also goes through each value of an array, but cumulatively combines them to return a single value. 
+            Reduce(): also goes through each value of an array, but cumulatively combines them to return a single value.
         </li>
         <li>
-            Filter(): acts like a filter, goes through an array of values and returns the values that return true when passed through a callback.
+            Filter(): acts like a filter, goes through an array of values and returns the values that return true when
+            passed through a callback.
         </li>
         <li>
-            Because some of these iterator methods return an array, other iterators can be chained on to it to perform their action on the resulting array. 
+            Because some of these iterator methods return an array, other iterators can be chained on to it to perform
+            their action on the resulting array.
         </li>
     </ul>
 
     <Footer>
         <a href="index.html">Return to Week 2</a>
     </Footer>
+    <script>
+        console.log(
+            "The following functions were made: multiply, square, multiplication, multiplyArrow, noise, source, numerically."
+            )
+
+        function multiply(x, y) {
+            return x * y
+        }
+
+        function square(x) {
+            return x * x
+        }
+
+        function multiplication(...values) {
+            let total = 1
+            for (const value of values) {
+                total *= value;
+            }
+            return total
+        }
+        const multiplyArrow = (x, y) => x * y;
+
+        function noise(sound, source) {
+            return `that noise sounded like a ${sound}.` + ` ` + source();
+        }
+
+        function source() {
+            return `It came from over there.`
+        }
+
+
+
+        function numerically(a, b) {
+            return a - b;
+        }
+    </script>
 </body>
 
 </html>

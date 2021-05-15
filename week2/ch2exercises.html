@@ -6,51 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 2 Chapter 2</title>
-    <script>
-        const name = "Joseph";
 
-        let x = 5,
-            y = 6,
-            z = 7;
-
-        /*
-        let name = "Mitch"
-        console reports: Uncaught SyntaxError: Identifier 'name' has already been declared
-        */
-        const lastName = {
-            value: "Bart"
-        };
-        lastName.value = "Clark";
-
-        x = 1
-        console.log("x = " + x)
-        //Scope tests
-        {
-            const a = 2; {
-                const a = 3;
-                console.log("a = " + a);
-            }
-            console.log("a = " + a)
-        }
-
-        {
-            x = 7;
-            console.log("x = " + x);
-        }
-
-        console.log("x = " + x);
-
-        console.log(parseInt("5000ABC")) // returns 5000
-
-        //Template Literals
-        console.log(`Hello ${ name }!`)
-        console.log(`x = ${x}`)
-        console.log(`this is a backtick: \` `)
-        console.log(`This line has a dramatic...
-        
-        
-        pause.`)
-    </script>
     <style></style>
 </head>
 
@@ -136,13 +92,58 @@
             Template Literals use the backtick ` to deliminate the string. `Hello` instead of 'Hello'
         </li>
         <li>
-            You can put javascript expression inside a string that will show the result instead of the script. 
+            You can put javascript expression inside a string that will show the result instead of the script.
         </li>
     </ul>
 
     <Footer>
         <a href="index.html">Return to Week 2</a>
     </Footer>
+    <script>
+        const name = "Joseph";
+
+        let x = 5,
+            y = 6,
+            z = 7;
+
+        /*
+        let name = "Mitch"
+        console reports: Uncaught SyntaxError: Identifier 'name' has already been declared
+        */
+        const lastName = {
+            value: "Bart"
+        };
+        lastName.value = "Clark";
+
+        x = 1
+        console.log("x = " + x)
+        //Scope tests
+        {
+            const a = 2; {
+                const a = 3;
+                console.log("a = " + a);
+            }
+            console.log("a = " + a)
+        }
+
+        {
+            x = 7;
+            console.log("x = " + x);
+        }
+
+        console.log("x = " + x);
+
+        console.log(parseInt("5000ABC")) // returns 5000
+
+        //Template Literals
+        console.log(`Hello ${ name }!`)
+        console.log(`x = ${x}`)
+        console.log(`this is a backtick: \` `)
+        console.log(`This line has a dramatic...
+        
+        
+        pause.`)
+    </script>
 </body>
 
 </html>

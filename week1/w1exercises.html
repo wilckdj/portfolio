@@ -1,67 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Section 2.3 Exercise</title>
-    <script>
-        function loadStory() {
-            var storyName = document.getElementById("name_input").value
-            var storyHTML = localStorage.getItem(storyName)
-            document.getElementById("story_editor").value = storyHTML
-        }
-        function saveStory(){
-            var storyName = document.getElementById("name_input").value
-            var storyHTML = document.getElementById("story_editor").value
-            localStorage.setItem(storyName, storyHTML)
-        }
-        function displayStory() {
-            var storyHTML = document.getElementById("story_editor").value
-            document.getElementById("story_display").innerHTML = storyHTML 
-        }
-        
-        /*'My local storage contained the following array: 
-        My Story: "Hello How are you?"
-        Paige: "Hello Paige"
-        Story1: "This is the first story"
-        Story2: "This is the second story"
-        length: 4      
-        */      
-
-        //How do I view LocalStorage?
-            //console.log(localStorage.getItem("Paige"))
-            //console.log(localStorage.getItem("Story1"))
-        //Answer: use the key
-
-        //experimenting with localStorage, viewing all items
-            /*
-            console.log(localStorage.length) //length was 5 for my experiment.
-        
-            for (let i = 0; i < localStorage.length; i++) {
-            console.log(localStorage.key(i))
-            }
-            */
-
-        //view as an array?
-        console.log(localStorage)
-
-        //clear specific localStorage key/value, blank keys
-        localStorage.removeItem("")
 
 
-        
-
-    </script>
-    
     <style>
-        textarea{
-            width:800px;
+        textarea {
+            width: 800px;
             height: 250px;
             background-color: lightyellow;
-        }    
+        }
     </style>
 </head>
+
 <body>
     <h1>Story Editor</h1>
     Story Name: <input id="name_input"></input>
@@ -76,5 +31,52 @@
     <Footer>
         <a href="index.html">Return to Week 1</a>
     </Footer>
+    <script>
+        function loadStory() {
+            var storyName = document.getElementById("name_input").value
+            var storyHTML = localStorage.getItem(storyName)
+            document.getElementById("story_editor").value = storyHTML
+        }
+
+        function saveStory() {
+            var storyName = document.getElementById("name_input").value
+            var storyHTML = document.getElementById("story_editor").value
+            localStorage.setItem(storyName, storyHTML)
+        }
+
+        function displayStory() {
+            var storyHTML = document.getElementById("story_editor").value
+            document.getElementById("story_display").innerHTML = storyHTML
+        }
+
+        /*'My local storage contained the following array: 
+        My Story: "Hello How are you?"
+        Paige: "Hello Paige"
+        Story1: "This is the first story"
+        Story2: "This is the second story"
+        length: 4      
+        */
+
+        //How do I view LocalStorage?
+        //console.log(localStorage.getItem("Paige"))
+        //console.log(localStorage.getItem("Story1"))
+        //Answer: use the key
+
+        //experimenting with localStorage, viewing all items
+        /*
+            console.log(localStorage.length) //length was 5 for my experiment.
+        
+            for (let i = 0; i < localStorage.length; i++) {
+            console.log(localStorage.key(i))
+            }
+            */
+
+        //view as an array?
+        console.log(localStorage)
+
+        //clear specific localStorage key/value, blank keys
+        localStorage.removeItem("")
+    </script>
 </body>
+
 </html>

@@ -6,119 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 3 Chapter 5</title>
-    <script>
-        const superman = {
-            name: 'Superman',
-            'real name': 'Clark Kent',
-            height: 75,
-            weight: 235,
-            hero: true,
-            villain: false,
-            allies: ['Batman', 'Supergirl', 'Superboy'],
-            fly() {
-                return 'Up, up and away!';
-            }
-        };
 
-        //console.table(superman.allies);
-        console.log(superman.allies)
-        console.log('hero' in superman);
-
-        /*for (const key in superman) {
-            console.log(key + ": " + superman[key]);
-        }*/
-        //console.table(superman)
-        for (const key of Object.keys(superman)) {
-            console.log(key);
-        }
-        //console.table(Object.keys(superman));
-        for (const [key, value] of Object.entries(superman)) {
-            console.log(`${key}: ${value}`);
-        }
-        superman.city = 'Metropolis';
-        superman['real name'] = 'Kal-El';
-
-        const jla = {
-            superman: {
-                realName: 'Clark Kent'
-            },
-            batman: {
-                realName: 'Bruce Wayne'
-            },
-            wonderWoman: {
-                realName: 'Diana Prince'
-            },
-            flash: {
-                realName: 'Barry Allen'
-            },
-            aquaman: {
-                realName: 'Arthur Curry'
-            },
-        }
-
-        /*function greet({greeting, name, age}) {
-            return `${greeting}! My name is ${name} and I am ${age} years old.`;
-        }*/
-        function greet({
-            greeting = 'Hello',
-            name,
-            age = 18
-        }) {
-            return `${greeting}! My name is ${name} and I am ${age} years old.`;
-        }
-
-        /*const dice = {
-            sides: 6,
-            roll() {
-                return Math.floor(this.sides * Math.random()) + 1;
-            }
-        }*/
-
-        const dice = {
-            d4: {
-                sides: 4,
-                roll() {
-                    return Math.floor(this.sides * Math.random()) + 1;
-                }
-            },
-            d6: {
-                sides: 6,
-                roll() {
-                    return Math.floor(this.sides * Math.random()) + 1;
-                }
-            },
-            d8: {
-                sides: 8,
-                roll() {
-                    return Math.floor(this.sides * Math.random()) + 1;
-                }
-            },
-            d10: {
-                sides: 10,
-                roll() {
-                    return Math.floor(this.sides * Math.random()) + 1;
-                }
-            },
-            d12: {
-                sides: 12,
-                roll() {
-                    return Math.floor(this.sides * Math.random()) + 1;
-                }
-            },
-            d20: {
-                sides: 20,
-                roll() {
-                    return Math.floor(this.sides * Math.random()) + 1;
-                }
-            },
-            d100: {
-                sides: 10,
-                roll() {
-                    return (Math.floor(this.sides * Math.random()) + 1) * 10;
-                }
-            },
-        }
-    </script>
     <style></style>
 </head>
 
@@ -232,6 +120,119 @@
     <Footer>
         <a href="index.html">Return to Week 3</a>
     </Footer>
+    <script>
+        const superman = {
+            name: 'Superman',
+            'real name': 'Clark Kent',
+            height: 75,
+            weight: 235,
+            hero: true,
+            villain: false,
+            allies: ['Batman', 'Supergirl', 'Superboy'],
+            fly() {
+                return 'Up, up and away!';
+            }
+        };
+
+        //console.table(superman.allies);
+        console.log(superman.allies)
+        console.log('hero' in superman);
+
+        /*for (const key in superman) {
+            console.log(key + ": " + superman[key]);
+        }*/
+        //console.table(superman)
+        for (const key of Object.keys(superman)) {
+            console.log(key);
+        }
+        //console.table(Object.keys(superman));
+        for (const [key, value] of Object.entries(superman)) {
+            console.log(`${key}: ${value}`);
+        }
+        superman.city = 'Metropolis';
+        superman['real name'] = 'Kal-El';
+
+        const jla = {
+            superman: {
+                realName: 'Clark Kent'
+            },
+            batman: {
+                realName: 'Bruce Wayne'
+            },
+            wonderWoman: {
+                realName: 'Diana Prince'
+            },
+            flash: {
+                realName: 'Barry Allen'
+            },
+            aquaman: {
+                realName: 'Arthur Curry'
+            },
+        }
+
+        /*function greet({greeting, name, age}) {
+            return `${greeting}! My name is ${name} and I am ${age} years old.`;
+        }*/
+        function greet({
+            greeting = 'Hello',
+            name,
+            age = 18
+        }) {
+            return `${greeting}! My name is ${name} and I am ${age} years old.`;
+        }
+
+        /*const dice = {
+            sides: 6,
+            roll() {
+                return Math.floor(this.sides * Math.random()) + 1;
+            }
+        }*/
+
+        const dice = {
+            d4: {
+                sides: 4,
+                roll() {
+                    return Math.floor(this.sides * Math.random()) + 1;
+                }
+            },
+            d6: {
+                sides: 6,
+                roll() {
+                    return Math.floor(this.sides * Math.random()) + 1;
+                }
+            },
+            d8: {
+                sides: 8,
+                roll() {
+                    return Math.floor(this.sides * Math.random()) + 1;
+                }
+            },
+            d10: {
+                sides: 10,
+                roll() {
+                    return Math.floor(this.sides * Math.random()) + 1;
+                }
+            },
+            d12: {
+                sides: 12,
+                roll() {
+                    return Math.floor(this.sides * Math.random()) + 1;
+                }
+            },
+            d20: {
+                sides: 20,
+                roll() {
+                    return Math.floor(this.sides * Math.random()) + 1;
+                }
+            },
+            d100: {
+                sides: 10,
+                roll() {
+                    return (Math.floor(this.sides * Math.random()) + 1) * 10;
+                }
+            },
+        }
+    </script>
 </body>
 
 </html>

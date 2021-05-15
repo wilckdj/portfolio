@@ -6,73 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 4 Chapter 12</title>
-    <script>
-        const dice = {
-            sides: 6,
-            roll() {
-                return Math.floor(this.sides * Math.random() + 1)
-            }
-        }
-        /*const Dice = function (sides = 6) {
-            this.sides = sides;
-            this.roll = function () {
-                return Math.floor(this.sides * Math.random() + 1)
-            }
-        }*/
 
-        class Dice {
-            constructor(sides = 6) {
-                this.sides = sides;
-            }
-            roll() {
-                return Math.floor(this.sides * Math.random() + 1)
-            }
-            static description() {
-                return 'A way of choosing random numbers'
-            }
-        }
-        const redDice = new Dice();
-        const blueDice = new Dice(20);
-        const greenDice = new redDice.constructor(10);
-
-        class Turtle {
-            constructor(name, color) {
-                this.name = name;
-                let _color = color;
-                this.setColor = color => {
-                    return _color = color;
-                }
-                this.getColor = () => _color;
-
-                //this.weapon = 'hands';
-            }
-            sayHi() {
-                return `Hi dude, my name is ${this.name}`;
-            }
-            /*attack() {
-                return `Feel the power of my ${this.weapon}!`;
-            }*/
-        }
-
-        const leo = new Turtle('Leonardo');
-
-        Turtle.prototype.weapon = 'Hands';
-        Turtle.prototype.attack = function () {
-            return `Feel the power of my ${this.weapon}!`;
-        }
-
-        const raph = new Turtle('Raphael', 'Red');
-        const don = new Turtle('Donatello');
-        leo.weapon = 'Katana Blades';
-        raph.weapon = 'Sai';
-        don.weapon = 'Bo Staff';
-        Turtle.prototype.food = 'Pizza';
-        Turtle.prototype.eat = function () {
-            return `Mmm, this ${this.food} tastes great!`;
-        }
-        const mike = new Turtle('Michelangelo');
-        mike.weapon = 'Nunchakus';
-    </script>
     <style></style>
 </head>
 
@@ -169,17 +103,120 @@
             Using variable scope, some properties and methods can be kept private inside of a class declaration.
         </li>
         <li>
-            Because a prototype is just another object, it has its own prototype, which has a prototype, causing a chain. 
+            Because a prototype is just another object, it has its own prototype, which has a prototype, causing a
+            chain.
         </li>
         <li>
-            
+            Enumerable properties are properties that show up when a for-in loop is used.
+        </li>
+        <li>
+            A class can inherit from another class using the extends keyword in a class declaration.
+        </li>
+        <li>
+            Polymorphism means that different objects can have the same method used in different ways.
+        </li>
+        <li>
+            Adding methods to built-in objects is known as monkey-patching, and is mostly frowned upon.
+        </li>
+        <li>
+            An alternative to monkey-patching is using the extends keyword to build a subclass for your own methods.
         </li>
 
     </ul>
 
     <Footer>
-        <a href="index.html">Return to Week 3</a>
+        <a href="index.html">Return to Week 4</a>
     </Footer>
+    <script>
+        const dice = {
+            sides: 6,
+            roll() {
+                return Math.floor(this.sides * Math.random() + 1)
+            }
+        }
+        /*const Dice = function (sides = 6) {
+            this.sides = sides;
+            this.roll = function () {
+                return Math.floor(this.sides * Math.random() + 1)
+            }
+        }*/
+
+        class Dice {
+            constructor(sides = 6) {
+                this.sides = sides;
+            }
+            roll() {
+                return Math.floor(this.sides * Math.random() + 1)
+            }
+            static description() {
+                return 'A way of choosing random numbers'
+            }
+        }
+        const redDice = new Dice();
+        const blueDice = new Dice(20);
+        const greenDice = new redDice.constructor(10);
+
+        class Turtle {
+            constructor(name, color) {
+                this.name = name;
+                let _color = color;
+                this.setColor = color => {
+                    return _color = color;
+                }
+                this.getColor = () => _color;
+
+                //this.weapon = 'hands';
+            }
+            sayHi() {
+                return `Hi dude, my name is ${this.name}`;
+            }
+            swim() {
+                return `${this.name} paddles in the water`;
+            }
+            /*attack() {
+                return `Feel the power of my ${this.weapon}!`;
+            }*/
+        }
+
+
+
+        const leo = new Turtle('Leonardo');
+
+        Turtle.prototype.weapon = 'Hands';
+        Turtle.prototype.attack = function () {
+            return `Feel the power of my ${this.weapon}!`;
+        }
+
+        const raph = new Turtle('Raphael', 'Red');
+        const don = new Turtle('Donatello');
+        leo.weapon = 'Katana Blades';
+        raph.weapon = 'Sai';
+        don.weapon = 'Bo Staff';
+        Turtle.prototype.food = 'Pizza';
+        Turtle.prototype.eat = function () {
+            return `Mmm, this ${this.food} tastes great!`;
+        }
+        const mike = new Turtle('Michelangelo');
+        mike.weapon = 'Nunchakus';
+
+        //----Monkey-Patching
+        Number.prototype.isEven = function () {
+            return this % 2 === 0;
+        }
+        Number.prototype.isOdd = function () {
+            return this % 2 === 1;
+        }
+        Array.prototype.first = function () {
+            return this[0];
+        }
+        Array.prototype.last = function () {
+            return this[this.length - 1];
+        }
+
+        Array.prototype.delete = function (i) {
+            return self.splice(i, 1);
+        }
+    </script>
 </body>
 
 </html>

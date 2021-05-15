@@ -18,122 +18,122 @@
         <li class='vigilante hero' id='bats'>Batman</li>
         <li class='hero'>Wonder Woman</li>
     </ul>
+
+    <Footer>
+        <a href="index.html">Return to Week 3</a>
+    </Footer>
+
+    <script>
+        const body = document.body;
+        console.log(typeof body);
+        console.log(body.nodeType)
+
+        /* nodes have a numerical code to signify what type they are:
+        1 - element
+        2 - attribute
+        3 - text
+        8 - comment
+        9 - body*/
+        //get by ID
+        const h1 = document.getElementById('title');
+        //get list by tag name
+        const listItems = document.getElementsByTagName('li');
+        console.log(listItems[0]);
+        //get elements by class name
+        let heroes = document.getElementsByClassName('hero');
+        console.log(heroes.length)
+        console.log(document.getElementsByClassName('villain').length);
+
+        //querySelector uses CSS notation, which I like. 
+        console.log(document.querySelector('#bats'));
+
+        const wonderWoman = document.querySelector('li:last-child');
+        const ul = document.querySelector('ul#roster');
+        const batman = ul.querySelector('li#bats')
+
+        heroes = document.getElementById('roster');
+        console.log(heroes.childNodes)
+        //childNodes returns all nodes, children returns only element nodes.
+        console.log(heroes.children);
+        console.log(heroes.firstChild);
+        console.log(heroes.lastChild);
+
+        //parentNode returns the parent node of an element.
+        console.log(wonderWoman.parentNode);
+        //nextSibling returns the next adjacent node of the same parent, likewise with previousSibling. 
+        console.log(wonderWoman.nextSibling);
+        console.log(wonderWoman.previousSibling);
+        //find the value of a node
+        const textNode = wonderWoman.firstChild;
+        console.log(textNode.nodeValue);
+
+        //get an element's attribute with .getAttribute())
+        console.log(wonderWoman.getAttribute('class'));
+
+        //set an attribute with.setAttribute()
+        wonderWoman.setAttribute('class', 'villain');
+        console.log(wonderWoman.getAttribute('class'));
+
+        //instead of using setAttribute, you can use className for class names. 
+        console.log(wonderWoman.className);
+        wonderWoman.className = 'hero'
+
+        // it is better to add class names with classList instead of className. 
+        wonderWoman.classList.add('warrior');
+        console.log(wonderWoman.className);
+        wonderWoman.classList.remove('warrior');
+
+        //classList.toggle removes and adds a class.
+
+        //Elements can be created with JavaScript
+        const flash = document.createElement('li');
+        const flashText = document.createTextNode('Flash');
+
+        //the created nodes must be appended to each other in proper order
+        flash.appendChild(flashText);
+
+        function createElement(tag, text) {
+            const el = document.createElement(tag);
+            el.textContent = text;
+            return el
+        }
+
+        const aquaman = createElement('li', 'Aquaman');
+
+        //the created elements can be appended to the page
+        heroes.appendChild(flash);
+        //you can insert an element before another with .insertBefore()
+        heroes.insertBefore(aquaman, wonderWoman);
+
+        //if you append a child that already exists, it moves the position to the end. 
+        heroes.appendChild(wonderWoman);
+
+        //removeChild is the opposite of the appendChild. 
+        heroes.removeChild(aquaman);
+        heroes.appendChild(aquaman);
+
+        //you can replace elements with replaceChild
+        const oldText = h1.firstChild;
+        const newText = document.createTextNode('Justice League of America');
+        h1.replaceChild(newText, oldText);
+
+        //while innerText or textContent affects the text, innerHTML affects the actual HTML
+
+        /*h1.innerHTML = 'Suicide Squad';
+        heroes.innerHTML =
+            '<li>Harley Quinn</li><li>Deadshot</li><li>Killer Croc</li><li>Enchantress</li><li>Captain Boomerang</li><li>Katana</li><li>Slipknot</li>';
+        */
+        //you cannot insert scripts using innerHTML.
+
+        //style property of elements can also be updated. 
+        const superman = heroes.children[0];
+        superman.style.border = "red 2px solid";
+        superman.style.backgroundColor = 'blue';
+
+        //css can hide elements. 
+        //superman.style.display = 'none';
+        //superman.style.display = 'block';
+    </script>
 </body>
-<Footer>
-    <a href="index.html">Return to Week 3</a>
-</Footer>
-
-<script>
-    const body = document.body;
-    console.log(typeof body);
-    console.log(body.nodeType)
-
-    /* nodes have a numerical code to signify what type they are:
-    1 - element
-    2 - attribute
-    3 - text
-    8 - comment
-    9 - body*/
-    //get by ID
-    const h1 = document.getElementById('title');
-    //get list by tag name
-    const listItems = document.getElementsByTagName('li');
-    console.log(listItems[0]);
-    //get elements by class name
-    let heroes = document.getElementsByClassName('hero');
-    console.log(heroes.length)
-    console.log(document.getElementsByClassName('villain').length);
-
-    //querySelector uses CSS notation, which I like. 
-    console.log(document.querySelector('#bats'));
-
-    const wonderWoman = document.querySelector('li:last-child');
-    const ul = document.querySelector('ul#roster');
-    const batman = ul.querySelector('li#bats')
-
-    heroes = document.getElementById('roster');
-    console.log(heroes.childNodes)
-    //childNodes returns all nodes, children returns only element nodes.
-    console.log(heroes.children);
-    console.log(heroes.firstChild);
-    console.log(heroes.lastChild);
-
-    //parentNode returns the parent node of an element.
-    console.log(wonderWoman.parentNode);
-    //nextSibling returns the next adjacent node of the same parent, likewise with previousSibling. 
-    console.log(wonderWoman.nextSibling);
-    console.log(wonderWoman.previousSibling);
-    //find the value of a node
-    const textNode = wonderWoman.firstChild;
-    console.log(textNode.nodeValue);
-
-    //get an element's attribute with .getAttribute())
-    console.log(wonderWoman.getAttribute('class'));
-
-    //set an attribute with.setAttribute()
-    wonderWoman.setAttribute('class', 'villain');
-    console.log(wonderWoman.getAttribute('class'));
-
-    //instead of using setAttribute, you can use className for class names. 
-    console.log(wonderWoman.className);
-    wonderWoman.className = 'hero'
-
-    // it is better to add class names with classList instead of className. 
-    wonderWoman.classList.add('warrior');
-    console.log(wonderWoman.className);
-    wonderWoman.classList.remove('warrior');
-
-    //classList.toggle removes and adds a class.
-
-    //Elements can be created with JavaScript
-    const flash = document.createElement('li');
-    const flashText = document.createTextNode('Flash');
-
-    //the created nodes must be appended to each other in proper order
-    flash.appendChild(flashText);
-
-    function createElement(tag, text) {
-        const el = document.createElement(tag);
-        el.textContent = text;
-        return el
-    }
-
-    const aquaman = createElement('li', 'Aquaman');
-
-    //the created elements can be appended to the page
-    heroes.appendChild(flash);
-    //you can insert an element before another with .insertBefore()
-    heroes.insertBefore(aquaman, wonderWoman);
-
-    //if you append a child that already exists, it moves the position to the end. 
-    heroes.appendChild(wonderWoman);
-
-    //removeChild is the opposite of the appendChild. 
-    heroes.removeChild(aquaman);
-    heroes.appendChild(aquaman);
-
-    //you can replace elements with replaceChild
-    const oldText = h1.firstChild;
-    const newText = document.createTextNode('Justice League of America');
-    h1.replaceChild(newText, oldText);
-
-    //while innerText or textContent affects the text, innerHTML affects the actual HTML
-
-    /*h1.innerHTML = 'Suicide Squad';
-    heroes.innerHTML =
-        '<li>Harley Quinn</li><li>Deadshot</li><li>Killer Croc</li><li>Enchantress</li><li>Captain Boomerang</li><li>Katana</li><li>Slipknot</li>';
-    */
-    //you cannot insert scripts using innerHTML.
-
-    //style property of elements can also be updated. 
-    const superman = heroes.children[0];
-    superman.style.border = "red 2px solid";
-    superman.style.backgroundColor = 'blue';
-
-    //css can hide elements. 
-    //superman.style.display = 'none';
-    //superman.style.display = 'block';
-
-</script>
 
 </html>
