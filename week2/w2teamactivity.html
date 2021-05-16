@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +8,17 @@
     <title>Team Activity 2</title>
 
 </head>
+
 <body>
-    
-    <input type="text" id="inputID">
-    
+    <label for="inputID">
+        <input type="text" id="inputID">
+    </label>
     <button onclick="addingMachine(inputID.value, inputID2.value)">+</button>
     <button onclick="divide(inputID.value, inputID2.value)">/</button>
     <button onclick="multiply(inputID.value, inputID2.value)">*</button>
-    
-    <input type="text" id="inputID2">
-    
+    <label for="inputID2">
+        <input type="text" id="inputID2">
+    </label>
 
     <button onclick="number2(inputID.value)">Get Button</button>
 
@@ -31,15 +33,15 @@
         <a href="index.html">Return to Week 2</a>
     </Footer>
     <script>
-        function getInput(){
+        function getInput() {
             document.getElementById("divID").innerHTML = document.getElementById("inputID").value;
         }
 
-        function number2(number){
+        function number2(number) {
             let answer = 0;
-            
-            if(isNaN(number) === false){
-                for(i = 1; i <= number; i++){
+
+            if (isNaN(number) === false) {
+                for (i = 1; i <= number; i++) {
                     answer += i;
                 }
                 console.log(answer);
@@ -48,20 +50,20 @@
             return document.getElementById('divID').innerHTML = answer;
         }
 
-        function addingMachine(x,y){
+        function addingMachine(x, y) {
             x = parseInt(x);
             y = parseInt(y);
             //intParse(x,y);
             return document.getElementById('addingAnswer').innerHTML = x + y;
         }
 
-        const divide = (x,y) => {
+        const divide = (x, y) => {
             x = parseInt(x);
             y = parseInt(y);
             return document.getElementById('divID').innerHTML = x / y;
         }
 
-        const multiply = function(x,y){
+        const multiply = function (x, y) {
             x = parseInt(x);
             y = parseInt(y);
             return document.getElementById('divID').innerHTML = x * y;
@@ -73,7 +75,7 @@
 
             return x,y;
         }*/
-
     </script>
 </body>
+
 </html>
