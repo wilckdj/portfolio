@@ -36,7 +36,7 @@ function visitCounter() {
     visitTotal++;
 
     localStorage.setItem('visitCount', visitTotal);
-    console.log(localStorage)
+    //console.log(localStorage)
     document.getElementById("visitNum").innerHTML = visitTotal;
 
 }   
