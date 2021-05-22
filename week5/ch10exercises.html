@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5 Chapter 10</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/small.css">
+    <link rel="stylesheet" href="../css/medium.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#395b50">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#395b50">
+    <style></style>
+</head>
+
+<body>
+    <header>
+        <H1>
+            WDD 330 Portfolio
+        </H1>
+    </header>
+    <main>
+        <h2 class="mainTitle">Week 5 Notes</h2>
+        <H3>Chapter 10</H3>
+
+        <p>Some examples are in the console and code comments. </p>
+
+        <ul>
+            <li>
+                There are three types of errors:
+                <ul>
+                    <li>
+                        System Error: Problem with the system or external devices.
+                    </li>
+                    <li>
+                        Programmer error: Program contains incorrect syntax or logic.
+                    </li>
+                    <li>
+                        User error: User entered data incorrectly
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Programmers are responsible for minimizing and fixing programmer errors.
+            </li>
+            <li>
+                Programmers should be aware of potential system and user errors to prevent them.
+            </li>
+            <li>
+                Exceptions are errors that produce a return value that can be used to deal with the error. (ex:
+                ReferenceError)
+            </li>
+            <li>
+                Exceptions produce a stack trace, or the sequence of functions that lead to the error.
+            </li>
+            <li>
+                Warnings occur when there is an error that doesn't stop the program from running. (ex: assigning to
+                undeclared variable)
+            </li>
+            <li>
+                Javascript is fairly forgiving when it comes to errors, and will sometimes fail silently.
+            </li>
+            <li>
+                Because Javascript fails silently, programmers should make code that failes loudly.
+            </li>
+            <li>
+                Strict mode allows JavaScript to produce more exceptions and warnings, and prohibits use of deprecated
+                features.
+                <ul>
+                    <li>
+                        Strict mode is used by adding the following as the first line of the js file: 'use strict';
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Sloppy mode is a term for when strict mode is not used.
+            </li>
+            <li>
+                You can apply strict mode to a function by adding 'use strict'; to the start of the function.
+            </li>
+            <li>
+                Modules do not need 'use strict' because they are in strict mode by default.
+            </li>
+            <li>
+                Linting Tools (JS Lint, JS Hint, ES Lint) highlight sloppy programming practices and syntax errors. They
+                can also enforce a programming style guide.
+            </li>
+            <li>
+                Feature Detection is using an if statement to check whether a feature of a browser exists before
+                trying to call a method.
+            </li>
+            <li>
+                Debugging is the process of finding out where bugs occur in the code.
+            </li>
+            <li>
+                Putting alert() in the code is a basic form of debugging because alerts stop the program from running.
+            </li>
+            <li>
+                Code can be debugged in the console, using console.log(), console.trace(), and other methods.
+            </li>
+            <li>
+                You can also use the console debugging tool to create breakpoints for pausing the code and playing
+                through it.
+            </li>
+            <li>
+                The 'debugger' keyword to create a breakpoint in the code to pause it.
+                <ul>
+                    <li>
+                        The 'debugger' keyword should always be removed before the code is shipped.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Error objects can be created by the host environement or in the code using a constructor function.
+                <ul>
+                    <li>
+                        Other Error objects are: RangeError, ReferenceError, SyntaxError, TypeError, URIError,
+                        InternalError
+                    </li>
+                    <li>
+                        Safe error object properties across browsers are: name, message, stack.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                You can throw your own exceptions using the 'throw' statement. It is best to throw an error object.
+            </li>
+            <li>
+                The 'throw' statement can be included in an if statement.
+            </li>
+            <li>
+                When an exception occurs, the program terminates with an error message. This is ideal in development,
+                but not in production.
+            </li>
+            <li>
+                Errors can be hidden from users but still identified.
+            </li>
+            <li>
+                If you think a code will throw an exception, you can wrap it in a try block: try {} catch(error) {}
+                finally {}
+                <ul>
+                    <li>
+                        Resulting errors will be thrown into a catch block.
+                    </li>
+                    <li>
+                        If no error, the program will run.
+                    </li>
+                    <li>
+                        finally blocks are optional, but will always execute after the try or catch block, regardless of
+                        an exception.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Testing the code is important, you can write tests to ensure that the code works properly.
+            </li>
+            <li>
+                Test-driven development (TDD) means writing the tests first, then writing the code to pass the tests. 
+            </li>
+            <li>
+                There are programs to help with test driven development. Not everyone uses TDD though. 
+            </li>
+        </ul>
+    </main>
+    <Footer>
+        <a href="index.html">Return to Week 5</a>
+    </Footer>
+    <script>
+        'use strict'
+        //unicorn();
+        //<<Uncaught ReferenceError: unicorn is not defined
+
+        // function three(){ unicorn(); }
+        // function two(){ three(); }
+        // function one(){ two(); }
+        // one();
+        // << Uncaught ReferenceError: unicorn is not defined
+        //     at three (ch10exercises.html:70)
+        //     at two (ch10exercises.html:71)
+        //     at one (ch10exercises.html:72)
+        //     at ch10exercises.html:73
+
+        //pi = 3.142;
+        //Should have a warning, but chrome doesn't show.
+
+        //e = 2.718;
+        //With strict mode, an exception is thrown instead of a warning. 
+
+        if (window.holoDeck) {
+            virtualReality.activate();
+        }
+        //if feature doesn't exist, function won't run. 
+
+        //Alert debugging
+        // function amIOldEnough(age) {
+        //     if (age < 12) {
+        //         alert(age);
+        //         return 'No, sorry.';
+        //     } else if (age < 18) {
+        //         return 'Only if you are accompanied by an adult.';
+        //     } else {
+        //         return 'Yep, come on in!';
+        //     }
+        // }
+
+        //Console.log debugging, debugger
+        function amIOldEnough(age) {
+            console.log(age);
+            //debugger;
+            if (age < 12) {
+                //debugger;
+                console.log(`In the if with ${age}`);
+                return 'No, sorry.';
+            } else if (age < 18) {
+                //debugger;
+                console.log(`In the else-if with ${age}`);
+                return 'Only if you are accompanied by an adult.';
+            } else {
+                //debugger;
+                console.log(`In the else with ${age}`);
+                return 'Yep, come on in!';
+            }
+        }
+
+        const error = new Error('Oops, something went wrong');
+
+        function squareRoot(number) {
+            'use strict';
+            if (number < 0) {
+                throw new RangeError(`You can't find the square root of negative numbers`)
+            }
+            return Math.sqrt(number);
+        };
+
+        function imaginarySquareRoot(number) {
+            'use strict';
+            let answer;
+            try {
+                answer = String(squareRoot(number));
+            } catch (error) {
+                answer = squareRoot(-number) + "i";
+            } finally {
+                return `+ or - ${answer}`;
+            }
+        }
+
+        //This is a test function, not thorough though.
+        function itSquareRoots4() {
+            return squareRoot(4) === 2;
+        }
+    </script>
+</body>
+
+</html>
