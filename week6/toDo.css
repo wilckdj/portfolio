@@ -1,0 +1,19 @@
+.toDoContainer {
+    width:50%;
+    max-width: 1000px;
+
+}
+
+h3 {
+    text-align: center;
+}
+
+div {
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
