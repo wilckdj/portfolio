@@ -29,26 +29,27 @@ function validate(event) {
         alert('Your name is not allowed to start with X!');
     }
 }*/
-form.heroName.addEventListener('blur',validateInline, false);
+form.heroName.addEventListener('blur', validateInline, false);
 const label = form.querySelector('label');
 const error = document.createElement('div');
 error.classList.add('error');
 error.textContent = '! Your name is not allowed to start with X.';
 label.append(error);
+
 function validateInline() {
     const heroName = this.value.toUpperCase();
-    if(heroName.startsWith('X')){
-    error.style.display = 'block';
+    if (heroName.startsWith('X')) {
+        error.style.display = 'block';
     } else {
-    error.style.display = 'none';
+        error.style.display = 'none';
     }
 }
 
 function disableSubmit(event) {
-    if(event.target.value === ''){
+    if (event.target.value === '') {
         document.getElementById('submit').disabled = true;
     } else {
         document.getElementById('submit').disabled = false;
     }
 }
-form.heroName.addEventListener('keyup',disableSubmit,false);
+form.heroName.addEventListener('keyup', disableSubmit, false);

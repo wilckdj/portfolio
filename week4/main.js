@@ -8,5 +8,5 @@ import PI from './pi.js';
 import stats from './stats.js';
 
 
-console.log(PI) 
-console.log(stats.mean([5,7]))
+console.log(PI)
+console.log(stats.mean([5, 7]))

@@ -4,6 +4,9 @@
 <head>
     <meta charset='utf-8'>
     <title>Hero Form</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/small.css">
+    <link rel="stylesheet" href="../css/medium.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -21,58 +24,68 @@
 </head>
 
 <body>
-    <form id='hero'>
-        <label for='heroName'>Name:
-            <input type='text' id='heroName' name='heroName' autofocus placeholder='Your Super Hero Name' maxlength=32
-                required>
-        </label>
-        <label for='realName'>Real Name:
-            <input type='password' name='realName' id='realName'>
-        </label>
-        <p>Super Powers:</p>
-        <label for='flight'>Flight:
-            <input type='checkbox' id='flight' value='Flight' name='powers'>
-        </label>
-        <label for='strength'>Super Strength:
-            <input type='checkbox' id='strength' value='Strength' name='powers'>
-        </label>
-        <label for='speed'>Super Speed:
-            <input type='checkbox' id='speed' value='Super Speed' name='powers'>
-        </label>
-        <label for='energy'>Energy Blasts:
-            <input type='checkbox' id='energy' value='Energy Blasts' name='powers'>
-        </label>
-        <label for='telekinesis'>Telekinesis:
-            <input type='checkbox' id='telekinesis' value='Telekinesis' name='powers'>
-        </label>
-        <p>What type of hero are you?</p>
-        <label for='heroic'>Hero:
-            <input type='radio' name='category' value='Hero' id='heroic'>
-        </label>
-        <label for='villain'>Villain:
-            <input type='radio' name='category' value='Villain' id='villain'>
-        </label>
-        <label for='anti-hero'>Anti-Hero:
-            <input type='radio' name='category' value='Antihero' id='anti-hero'>
-        </label>
-        <label for='age'>Age:
-            <input type='number' id='age' name='age' min=0 step=1></label>
-        <label for='city'>Base of Operations:
-            <select name='city' id='city'>
-                <option value='' selected>Choose a City</option>
-                <option value='Metropolis'>Metropolis</option>
-                <option value='Gotham City'>Gotham City</option>
-                <option value='Keystone City'>Keystone City</option>
-                <option value='Coast City'>Coast City</option>
-                <option value='Star City'>Star City</option>
-            </select>
-        </label>
-        <label for='origin'>Origin Story:
-            <textarea id='origin' name='origin' rows='20' cols='60'></textarea>
-        </label>
-        <button type='reset'>Reset</button>
-        <button type='submit' id='submit' disabled>Submit</button>
-    </form>
+    <header>
+        <H1>
+            WDD 330 Portfolio
+        </H1>
+    </header>
+    <main>
+        <h2 class="mainTitle">Hero Form</h2>
+        <form id='hero'>
+            <label for='heroName'>Name:
+                <input type='text' id='heroName' name='heroName' autofocus placeholder='Your Super Hero Name'
+                    maxlength=32 required>
+            </label>
+            <label for='realName'>Real Name:
+                <input type='password' name='realName' id='realName'>
+            </label>
+            <p>Super Powers:</p>
+            <label for='flight'>Flight:
+                <input type='checkbox' id='flight' value='Flight' name='powers'>
+            </label>
+            <label for='strength'>Super Strength:
+                <input type='checkbox' id='strength' value='Strength' name='powers'>
+            </label>
+            <label for='speed'>Super Speed:
+                <input type='checkbox' id='speed' value='Super Speed' name='powers'>
+            </label>
+            <label for='energy'>Energy Blasts:
+                <input type='checkbox' id='energy' value='Energy Blasts' name='powers'>
+            </label>
+            <label for='telekinesis'>Telekinesis:
+                <input type='checkbox' id='telekinesis' value='Telekinesis' name='powers'>
+            </label>
+            <p>What type of hero are you?</p>
+            <label for='heroic'>Hero:
+                <input type='radio' name='category' value='Hero' id='heroic'>
+            </label>
+            <label for='villain'>Villain:
+                <input type='radio' name='category' value='Villain' id='villain'>
+            </label>
+            <label for='anti-hero'>Anti-Hero:
+                <input type='radio' name='category' value='Antihero' id='anti-hero'>
+            </label>
+            <label for='age'>Age:
+                <input type='number' id='age' name='age' min=0 step=1></label>
+            <label for='city'>Base of Operations:
+                <select name='city' id='city'>
+                    <option value='' selected>Choose a City</option>
+                    <option value='Metropolis'>Metropolis</option>
+                    <option value='Gotham City'>Gotham City</option>
+                    <option value='Keystone City'>Keystone City</option>
+                    <option value='Coast City'>Coast City</option>
+                    <option value='Star City'>Star City</option>
+                </select>
+            </label>
+            <br>
+            <label for='origin'>Origin Story: <br>
+                <textarea id='origin' name='origin' rows='20' cols='60'></textarea>
+            </label>
+            <br>
+            <button type='reset'>Reset</button>
+            <button type='submit' id='submit' disabled>Submit</button>
+        </form>
+    </main>
     <Footer>
         <a href="ch8exercises.html">Return to Chapter 8 Notes</a>
     </Footer>

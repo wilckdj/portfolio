@@ -52,14 +52,21 @@ footer a {
     width: 100%;
 }
 
+textarea {
+    width: 100%;
+    max-width: 800px;
+    height: 250px;
+    background-color: lightyellow;
+}
+
 .mainTitle {
     border-bottom: 1px solid #191919;
-
 }
 
 main {
     padding: 0 5% 0;
     line-height: 25px;
+
 }
 
 .short-line {

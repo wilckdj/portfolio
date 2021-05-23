@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 3 Chapter 5</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/small.css">
+    <link rel="stylesheet" href="../css/medium.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -18,112 +21,116 @@
 </head>
 
 <body>
-    <H1>
-        WDD 330 Portfolio
-    </H1>
-    <h2>Week 3 Notes</h2>
-    <H3>Chapter 5</H3>
+    <header>
+        <H1>
+            WDD 330 Portfolio
+        </H1>
+    </header>
+    <main>
+        <h2 class="mainTitle">Week 3 Notes</h2>
+        <H3>Chapter 5</H3>
 
-    <p>Some examples are in the console and code comments. </p>
-    <ul>
-        <li>
-            Objects are self-contained sets of related values and functions.
-        </li>
-        <li>
-            Objects are used to keep related inforamtion and functionality together.
-        </li>
-        <li>
-            object properties that don't follow naming rules need to be quoted:
-            <ul>
-                <li>
-                    name: 'Superman',
-                </li>
-                <li>
-                    'real name': 'Clark Kent',
-                </li>
-                <li>realName: 'Clark Kent'</li>
-            </ul>
-        </li>
-        <li>
-            Create an object literal as follows: const spiderman = {};
-        </li>
-        <li>
-            there is a shorthand method of creating objects, if the property key is the same as a variable name:
-            <ul>
-                <li>
-                    long: const ironMan = { name: name, realName: realName };
-                </li>
-                <li>
-                    short: const ironMan = { name, realName };
-                </li>
-            </ul>
-        </li>
-        <li>
-            Properties can be accessed two ways: superman.name -or- superman['name']
-        </li>
-        <li>
-            Computed property keys can be assigned with square brackets. ['catch' + 'Phrase'] becomes catchPhrase.
-        </li>
-        <li>
-            Property values can be experessions. {hero: bewitched ? false : true}
-        </li>
-        <li>
-            Methods can be called in two ways: superman.fly() -or- superman['fly']()
-        </li>
-        <li>
-            The 'in' operator can check whether an object has a property.
-        </li>
-        <li>
-            You can use for loops to cycle through all of the object's keys/values.
-        </li>
-        <li>
-            New properties are added by assigning a value to the property: superman.city = 'Metropolis'
-        </li>
-        <li>
-            Properties can be changed by updating the value: superman['real name'] = 'Kal-El';
-        </li>
-        <li>
-            Propertied are removed by using the delete operator: delete superman.fly
-        </li>
-        <li>
-            You can create nested objects, or objects that contain other objects.
-        </li>
-        <li>
-            Nested objects are accessed by referencing each property name in order: jla.wonderWoman.realName
-        </li>
-        <li>
-            Object literals can be passed as a parmeter to a function.
-        </li>
-        <li>
-            The keyword "this" refers to the object that it is within.
-        </li>
-        <li>
-            Putting functions that relate to each other inside an object is referred to as creating a namespace for
-            them.
-        </li>
-        <li>
-            JSON: JavaScript Object Notation, property names must be double-quoted, functions are not permitted values.
-            <ul>
-                <li>
-                    .parse() takes a string of JSON and returns the Javascript object.
-                </li>
-                <li>
-                    .stringify() takes the JavaScript object and returns a string of JSON data.
-                </li>
-            </ul>
-        </li>
-        <li>
-            The Math object is built-in and has several properties for mathematical constants and methods.
-        </li>
-        <li>
-            The Date object contains information about dates and times and has several methods. 
-        </li>
-        <li>
-            The RegExp object is a pattern used to search strings for matches. 
-        </li>
-    </ul>
-    
+        <p>Some examples are in the console and code comments. </p>
+        <ul>
+            <li>
+                Objects are self-contained sets of related values and functions.
+            </li>
+            <li>
+                Objects are used to keep related inforamtion and functionality together.
+            </li>
+            <li>
+                object properties that don't follow naming rules need to be quoted:
+                <ul>
+                    <li>
+                        name: 'Superman',
+                    </li>
+                    <li>
+                        'real name': 'Clark Kent',
+                    </li>
+                    <li>realName: 'Clark Kent'</li>
+                </ul>
+            </li>
+            <li>
+                Create an object literal as follows: const spiderman = {};
+            </li>
+            <li>
+                there is a shorthand method of creating objects, if the property key is the same as a variable name:
+                <ul>
+                    <li>
+                        long: const ironMan = { name: name, realName: realName };
+                    </li>
+                    <li>
+                        short: const ironMan = { name, realName };
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Properties can be accessed two ways: superman.name -or- superman['name']
+            </li>
+            <li>
+                Computed property keys can be assigned with square brackets. ['catch' + 'Phrase'] becomes catchPhrase.
+            </li>
+            <li>
+                Property values can be experessions. {hero: bewitched ? false : true}
+            </li>
+            <li>
+                Methods can be called in two ways: superman.fly() -or- superman['fly']()
+            </li>
+            <li>
+                The 'in' operator can check whether an object has a property.
+            </li>
+            <li>
+                You can use for loops to cycle through all of the object's keys/values.
+            </li>
+            <li>
+                New properties are added by assigning a value to the property: superman.city = 'Metropolis'
+            </li>
+            <li>
+                Properties can be changed by updating the value: superman['real name'] = 'Kal-El';
+            </li>
+            <li>
+                Propertied are removed by using the delete operator: delete superman.fly
+            </li>
+            <li>
+                You can create nested objects, or objects that contain other objects.
+            </li>
+            <li>
+                Nested objects are accessed by referencing each property name in order: jla.wonderWoman.realName
+            </li>
+            <li>
+                Object literals can be passed as a parmeter to a function.
+            </li>
+            <li>
+                The keyword "this" refers to the object that it is within.
+            </li>
+            <li>
+                Putting functions that relate to each other inside an object is referred to as creating a namespace for
+                them.
+            </li>
+            <li>
+                JSON: JavaScript Object Notation, property names must be double-quoted, functions are not permitted
+                values.
+                <ul>
+                    <li>
+                        .parse() takes a string of JSON and returns the Javascript object.
+                    </li>
+                    <li>
+                        .stringify() takes the JavaScript object and returns a string of JSON data.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                The Math object is built-in and has several properties for mathematical constants and methods.
+            </li>
+            <li>
+                The Date object contains information about dates and times and has several methods.
+            </li>
+            <li>
+                The RegExp object is a pattern used to search strings for matches.
+            </li>
+        </ul>
 
+    </main>
     <Footer>
         <a href="index.html">Return to Week 3</a>
     </Footer>

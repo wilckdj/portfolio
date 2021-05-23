@@ -17,7 +17,7 @@ div {
 }
 
 .container :nth-child(3n-2),
-:nth-child(3n-1) {
+.container :nth-child(3n-1) {
     border-right: 1px solid black;
 }
 
@@ -28,4 +28,3 @@ div {
 .container :nth-child(-n+6) {
     border-bottom: 1px solid black;
 }
-

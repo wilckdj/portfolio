@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Activity 2</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/small.css">
+    <link rel="stylesheet" href="../css/medium.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -17,25 +20,30 @@
 </head>
 
 <body>
-    <label for="inputID">First Number
-        <input type="text" id="inputID">
-    </label>
-    <button onclick="addingMachine(inputID.value, inputID2.value)">+</button>
-    <button onclick="divide(inputID.value, inputID2.value)">/</button>
-    <button onclick="multiply(inputID.value, inputID2.value)">*</button>
-    <label for="inputID2">Second Number
-        <input type="text" id="inputID2">
-    </label>
+    <header>
+        <H1>
+            WDD 330 Portfolio
+        </H1>
+    </header>
+    <main>
+        <h2 class="mainTitle">Basic HTML and Javascript tasks</h2>
+        <label for="inputID">First Number
+            <input type="text" id="inputID">
+        </label>
+        <button onclick="addingMachine(inputID.value, inputID2.value)">+</button>
+        <button onclick="divide(inputID.value, inputID2.value)">/</button>
+        <button onclick="multiply(inputID.value, inputID2.value)">*</button>
+        <label for="inputID2">Second Number
+            <input type="text" id="inputID2">
+        </label>
 
-    <button onclick="number2(inputID.value)">Get Button</button>
+        <button onclick="number2(inputID.value)">Get Button</button>
 
-    <div id="divID"></div>
+        <div id="divID"></div>
 
-    <div id="addingAnswer"></div>
+        <div id="addingAnswer"></div>
 
-    <button onclick="number2(inputID.value)">Get Button</button>
-
-
+    </main>
     <Footer>
         <a href="index.html">Return to Week 2</a>
     </Footer>

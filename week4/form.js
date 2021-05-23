@@ -5,5 +5,9 @@ const form = document.querySelector('#form');
 const errorElement = document.querySelector('#error');
 
 export {
-    username, password, passConfirm, form, errorElement
+    username,
+    password,
+    passConfirm,
+    form,
+    errorElement
 };

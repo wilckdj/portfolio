@@ -36,13 +36,15 @@ for (let i = 0; i < links.length; i++) {
 
 function visitCounter() {
     let visitTotal = localStorage.getItem('visitCount');
-    
-    visitTotal++;
+    let current = sessionStorage.getItem('session');
 
+    if (!current) {
+        visitTotal++;
+    }
     localStorage.setItem('visitCount', visitTotal);
     //console.log(localStorage)
+    sessionStorage.setItem('session', true);
     document.getElementById("visitNum").innerHTML = visitTotal;
-
-}   
+}
 
 visitCounter()

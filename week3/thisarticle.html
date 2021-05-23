@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 3 Object Methods, "this"</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/small.css">
+    <link rel="stylesheet" href="../css/medium.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -18,62 +21,66 @@
 </head>
 
 <body>
-    <H1>
-        WDD 330 Portfolio
-    </H1>
-    <h2>Week 3 Notes</h2>
-    <H3>Object Methods, "this"</H3>
-    <p>Some examples are in the console and code comments. </p>
-    <ul>
-        <li>
-            Objects usually represent real world entities: user
-        </li>
-        <li>
-            Objects can be used to call functions: user.sayHi()
-        </li>
-        <li>
-            When creating objects, you can assign a function as a property of the object, a method.
-        </li>
-        <li>
-            The term for writing code using objects is object-oriented programming.
-        </li>
-        <li>
-            The keyword "this" references the object calling the method.
-        </li>
-        <li>
-            "this" allows for the code to work even if the object is copied to another variable.
-        </li>
-        <li>
-            "this" is not bound: it can be used in any function even if its not a method.
-        </li>
-        <li>
-            If a function is called without an object, "this" is undefined.
-        </li>
-        <li>
-            Arrow functions have no "this": if "this" is referenced from an arrow function, it references the outer
-            normal function.
-        </li>
-    </ul>
+    <header>
+        <H1>
+            WDD 330 Portfolio
+        </H1>
+    </header>
+    <main>
+        <h2 class="mainTitle">Week 3 Notes</h2>
+        <H3>Object Methods, "this"</H3>
+        <p>Some examples are in the console and code comments. </p>
+        <ul>
+            <li>
+                Objects usually represent real world entities: user
+            </li>
+            <li>
+                Objects can be used to call functions: user.sayHi()
+            </li>
+            <li>
+                When creating objects, you can assign a function as a property of the object, a method.
+            </li>
+            <li>
+                The term for writing code using objects is object-oriented programming.
+            </li>
+            <li>
+                The keyword "this" references the object calling the method.
+            </li>
+            <li>
+                "this" allows for the code to work even if the object is copied to another variable.
+            </li>
+            <li>
+                "this" is not bound: it can be used in any function even if its not a method.
+            </li>
+            <li>
+                If a function is called without an object, "this" is undefined.
+            </li>
+            <li>
+                Arrow functions have no "this": if "this" is referenced from an arrow function, it references the outer
+                normal function.
+            </li>
+        </ul>
 
-    <h3>Calculator Example:</h3>
-    <div id="calculator_body">
-        <label for="input1">First Number
-            <input type="text" id="input1">
-        </label>
-        <label for="input2">Second Number
-            <input type="text" id="input2">
-        </label>
-        <br>
-        <button onclick="calculator.sum()">+</button>
-        <button onclick="calculator.sub()">-</button>
-        <button onclick="calculator.mul()">*</button>
-        <button onclick="calculator.div()">/</button>
-        <br>
-        <div id="calculator_output"><br></div>
-        <br>
 
-    </div>
+        <h3>Calculator Example:</h3>
+        <div id="calculator_body">
+            <label for="input1">First Number
+                <input type="text" id="input1">
+            </label>
+            <label for="input2">Second Number
+                <input type="text" id="input2">
+            </label>
+            <br>
+            <button onclick="calculator.sum()">+</button>
+            <button onclick="calculator.sub()">-</button>
+            <button onclick="calculator.mul()">*</button>
+            <button onclick="calculator.div()">/</button>
+            <br>
+            <div id="calculator_output"><br></div>
+            <br>
 
+        </div>
+    </main>
     <Footer>
         <a href="index.html">Return to Week 3</a>
     </Footer>

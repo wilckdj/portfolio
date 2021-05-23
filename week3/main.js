@@ -71,15 +71,16 @@ addEventListener('touchend', () => console.log('Touch stopped'));
 //you can remove event listeners, in case something should only be done once, or should be locked. 
 const onceParagraph = document.getElementById('once');
 onceParagraph.addEventListener('click', remove);
+
 function remove(event) {
     console.log('Enjoy this while it lasts!');
     onceParagraph.style.backgroundColor = 'pink';
-    onceParagraph.removeEventListener('click',remove);
+    onceParagraph.removeEventListener('click', remove);
 }
 
 //you can use event listeners to stop default behavior, but this should be done with caution. 
 const brokenLink = document.getElementById('broken');
-brokenLink.addEventListener('click',(event) => {
+brokenLink.addEventListener('click', (event) => {
     event.preventDefault();
     console.log('Broken Link!');
 });
@@ -105,4 +106,4 @@ console.log('Clicked on li'),true);*/
     console.log('clicked on li');
     event.stopPropagation(); }, false);*/
 //events can be delegated to children elements
-ulElement.addEventListener('click',highlight);
+ulElement.addEventListener('click', highlight);

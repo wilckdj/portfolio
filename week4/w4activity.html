@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 4 Activity: Form Validation</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/small.css">
+    <link rel="stylesheet" href="../css/medium.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -16,31 +19,42 @@
 </head>
 
 <body>
-    <div id="error"></div>
-    <form action="w4activity.html" method="GET" id="form">
-        <div>
-            <label for="name">Name:
-                <input id="name" name="name" type="text" required>
-            </label>
-        </div>
-        <div>
-            <label for="password">Password:
-                <input id="password" name="password" type="password">
-            </label>
-        </div>
-        <div>
-            <label for="passConfirm">Confirm Password:
-                <input id="passConfirm" name="passConfirm" type="password">
-            </label>
-        </div>
-        <button type="submit">Submit</button>
-    </form>
-    <p>
-        It is my understanding that a button type button can be assigned any function that it can call when the event is
-        triggered. This could include a form.submit() method, or any other function. A submit button on the other hand
-        will always submit the form data. In other words, submit buttons are specific to submission while normal buttons
-        can have any assigned behavior.
-    </p>
+    <header>
+        <H1>
+            WDD 330 Portfolio
+        </H1>
+    </header>
+    <main>
+        <h2 class="mainTitle">Form Validation</h2>
+        <div id="error"></div>
+        <form action="w4activity.html" method="GET" id="form">
+            <div>
+                <label for="name">Name:
+                    <input id="name" name="name" type="text" required>
+                </label>
+            </div>
+            <div>
+                <label for="password">Password:
+                    <input id="password" name="password" type="password">
+                </label>
+            </div>
+            <div>
+                <label for="passConfirm">Confirm Password:
+                    <input id="passConfirm" name="passConfirm" type="password">
+                </label>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <p>
+            It is my understanding that a button type button can be assigned any function that it can call when the
+            event is
+            triggered. This could include a form.submit() method, or any other function. A submit button on the other
+            hand
+            will always submit the form data. In other words, submit buttons are specific to submission while normal
+            buttons
+            can have any assigned behavior.
+        </p>
+    </main>
     <Footer>
         <a href="index.html">Return to Week 4</a>
     </Footer>

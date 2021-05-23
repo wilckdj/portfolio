@@ -4,6 +4,9 @@
 <head>
     <meta charset='utf-8'>
     <title>Events Examples</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/small.css">
+    <link rel="stylesheet" href="../css/medium.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -12,12 +15,20 @@
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#395b50">
     <style>
+        .mainContent {
+            display: grid;
+            align-items: center;
+            grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+
+        }
+
         p {
             width: 200px;
             height: 200px;
             margin: 10px;
             background-color: #ccc;
             float: left;
+
         }
 
         .highlight {
@@ -27,24 +38,33 @@
 </head>
 
 <body>
-    <h1>Events Example</h1>
-        <p id='click'>Click On Me</p>
-        <p id='dblclick'>Double Click On Me</p>
-        <p id='mouse'>Hover On Me</p>
-        <p id='once'>A One Time Thing...</p>
-        <p>
-            <a id='broken' href='https://sitepoint.com'>Broken Link</a>
-        </p>
+    <header>
+        <H1>
+            WDD 330 Portfolio
+        </H1>
+    </header>
+    <main>
+        <h2 class="mainTitle">Events Example</h2>
+        <div class="mainContent">
+            <p id='click'>Click On Me</p>
+            <p id='dblclick'>Double Click On Me</p>
+            <p id='mouse'>Hover On Me</p>
+            <p id='once'>A One Time Thing...</p>
+            <p>
+                <a id='broken' href='https://sitepoint.com'>Broken Link</a>
+            </p>
 
-        <ul id='list'>
-            <li>one</li>
-            <li>two</li>
-            <li>three</li>
-        </ul>
-        <Footer>
-            <a href="index.html">Return to Week 3</a>
-        </Footer>
-        <script src='main.js'></script>
+            <ul id='list'>
+                <li>one</li>
+                <li>two</li>
+                <li>three</li>
+            </ul>
+        </div>
+    </main>
+    <Footer>
+        <a href="index.html">Return to Week 3</a>
+    </Footer>
+    <script src='main.js'></script>
 </body>
 
 </html>
