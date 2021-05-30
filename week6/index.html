@@ -15,8 +15,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#395b50">
+    <!-- <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#395b50"> -->
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#395b50">
 
@@ -30,44 +30,48 @@
     </header>
     <main>
         <h2 class="mainTitle">Midterm Project</h2>
-        <div id="toDoContainer">
+        <div id="toDo">
 
             <h3>Todos</h3>
             <div id="toDoList">
-                <ul>
+                <ul id="taskList">
                     <!-- This format will be adjusted by the JavaScript -->
                     <li>
-                        <label for="checkBox2">
-                            <input type="checkbox" id="checkBox2">
-                            This is a Task
-                        </label>
+                        <input type="checkbox" id="checkBox1">
+                        <label for="checkBox1">This is a template, the progam should replace this.</label>
                         <button>X</button>
                     </li>
-                    
                 </ul>
-            </div>
-            <div id="toDoFooter">
-                <span><span id="taskCount"></span> tasks left</span>
-                <label for="allTasks">All</label>
-                <input type="radio" name="taskFilter" id="allTasks">
-                <label for="activeTasks">Active</label>
-                <input type="radio" name="taskFilter" id="activeTasks">
-                <label for="completedTasks">Completed</label>
-                <input type="radio" name="taskFilter" id="completedTasks">
 
+                <div id="toDoFooter">
+                    <span id="taskCount">## tasks left</span>
+                    <span class="filter right-align">
+
+                        <input type="radio" name="taskFilter" id="allTasks" checked>
+                        <label for="allTasks">All</label>
+
+                        <input type="radio" name="taskFilter" id="activeTasks">
+                        <label for="activeTasks">Active</label>
+
+                        <input type="radio" name="taskFilter" id="completedTasks">
+                        <label for="completedTasks">Completed</label>
+                    </span>
+                </div>
             </div>
 
-            <form id="addTask" action="">
-                <input type="text" placeholder="New Task">
-                <button type="submit">+</button>
+            <form id="newTask" action="">
+                <input type="text" placeholder="New Task" class="left-align" id="taskText" autofocus>
+                <button type="submit" class="right-align" id="addButton">+</button>
+
             </form>
-
         </div>
+
     </main>
     <Footer>
-        <a href="../index.html">Return to table of contents</a>
+        <a href="../index.html">Return to table of contents</a> <br>
+        <a href="https://trello.com/b/BYOrPLWB/todo-project" target="_blank">trello board</a>
     </Footer>
-    <script src="ToDos.js"></script>
+    <script src="main.js" type="module"></script>
 </body>
 
 </html>
