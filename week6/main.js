@@ -3,7 +3,7 @@ import {
     onTouch
 } from './utilities.js';
 
-import Todos from './Todos.js';
+import Todos from './toDos.js';
 
 const toDoList = new Todos(qs('#taskList')[0], "TaskListStorage");
 toDoList.listTodos();
