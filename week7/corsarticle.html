@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7 CORS Article</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/small.css">
+    <link rel="stylesheet" href="../css/medium.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#395b50">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#395b50">
+    <style></style>
+</head>
+
+<body>
+    <header>
+        <H1>
+            WDD 330 Portfolio
+        </H1>
+    </header>
+    <main>
+        <h2 class="mainTitle">Week 7 Notes</h2>
+        <H3>CORS Article</H3>
+        <ul>
+            <li>
+                Cross-Oriding Resource Sharing (CORS) allows a server to indicate any other origins that should be
+                permitted by the browser to lad resources from.
+            </li>
+            <li>
+                Browsers restrict cross-origin HTTP requests initiated from scripts for security reasons.
+            </li>
+            <li>
+                Unless the proper CORS header is included in the request, only resources from the same origin as the
+                application can be requested.
+            </li>
+            <li>
+                Modern browsers use CORS in APIs such as XMLHttpRequest or Fetch.
+            </li>
+            <li>
+                CORS standard works by adding new HTTP headers that let servers describe which origins are permitted.
+            </li>
+            <li>
+                Browsers ‘preflight’ the request by soliciting supported methods from the server, then with approval
+                from the server, sends the actual requests.
+            </li>
+            <li>
+                CORS failures result in errors that are not available to JavaScript, but can be looked at in the
+                console.
+            </li>
+            <li>
+                XMLHttpRequest can make cross-site requests in any supporting browser.
+            </li>
+            <li>
+                Simple requests don’t trigger a CORS preflight. They have specific conditions, including that no event
+                listeners are registered on the object returned.
+            </li>
+            <li>
+                The server can indicate what domains the access of the resource is restricted to using
+                “Access-Control-Allow-Origin: * (or https://example.example)”
+            </li>
+            <li>
+                Preflighted requests occur when the browser first sends a request using the OPTIONS method. This
+                determines if the request is safe to send.
+            </li>
+            <li>
+                The request can include “Access-Control-Request-Method:” or “Access-Control-Request-Headers: “ to make
+                sure that the server will accept those methods and headers specified.
+            </li>
+            <li>
+                Access-Control-Max-Age gives the value in seconds for how long the response to the preflight request can
+                be cached without sending another preflight request.
+            </li>
+            <li>
+                Not all browsers currently support redirects after a preflighted request.
+            </li>
+            <li>
+                Credentialed requests can be made with CORS that are aware of HTTP cookies and HTTP Authentication
+                information.
+            </li>
+            <li>
+                By default, credentials are not sent. A specific flag has to be set for credentials to be sent.
+            </li>
+            <li>
+                CORS-preflight requests must never include credentials.
+            </li>
+            <li>
+                The response to a preflight request must specify “Access-Control-Allow-Credentials: true” to indicate an
+                actual request can include credentials.
+            </li>
+            <li>
+                The HTTP Response headers are the ones that servers send back for access control requests.
+                <ul>
+                    <li>
+                        Access-Control-Allow-Origin: <origin> | *
+                    </li>
+                    <li>
+                        Access-Control-Expose-Headers: <header-name>[, <header-name>]*
+                    </li>
+                    <li>
+                        Access-Control-Max-Age: <delta-seconds>
+                    </li>
+                    <li>
+                        Access-Control-Allow-Credentials: true
+                    </li>
+                    <li>
+                        Access-Control-Allow-Methods: <method>[, <method>]*
+                    </li>
+                    <li>
+                        Access-Control-Allow-Headers: <header-name>[, <header-name>]*
+                    </li>
+                </ul>
+            </li>
+            <li>
+                The HTTP Request headers are the ones that clients may use when issuing HTTP requests in order to make
+                use of the CORS feature.
+                <ul>
+                    <li>
+                        Origin: <origin>
+                    </li>
+                    <li>
+                        Access-Control-Request-Method: <method>
+                    </li>
+                    <li>
+                        Access-Control-Request-Headers: <field-name>[, <field-name>]*
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </main>
+    <Footer>
+        <a href="index.html">Return to Week 7</a>
+    </Footer>
+    <script>
+
+    </script>
+</body>
+
+</html>

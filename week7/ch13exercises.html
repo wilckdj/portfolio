@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7 Chapter 13</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/small.css">
+    <link rel="stylesheet" href="../css/medium.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#395b50">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#395b50">
+    <style></style>
+</head>
+
+<body>
+    <header>
+        <H1>
+            WDD 330 Portfolio
+        </H1>
+    </header>
+    <main>
+        <h2 class="mainTitle">Week 7 Notes</h2>
+        <H3>Chapter 13</H3>
+        <ol>
+            <li>
+                <a href="ajax.html">ajax.html</a> - Textbook Example 1
+            </li>
+            <li>
+                <a href="todo.html">todo.html</a> - Textbook Example 2
+            </li>
+        </ol>
+        <ul>
+            <li>
+                Ajax allows web pages to communicate asynchronously with a server and dynamically update webpages
+                without reloading.
+            </li>
+            <li>
+                Clients request resources from a server, servers send responses back to client.
+            </li>
+            <li>
+                Javascript is a client-side language, Ajax allows it to request resources from a server.
+            </li>
+            <li>
+                Ajax can be practice with a local development server or a website that uses Cross-origin resource
+                sharing (CORS)
+            </li>
+            <li>
+                Asynchronous means that the program doesn't have to stop and wait for the response.
+            </li>
+            <li>
+                Ajax originally sent back XML documents, but JSON is most commonly used now.
+            </li>
+            <li>
+                Application programming interfaces (API) are methods that allow external access to a program or service.
+            </li>
+            <li>
+                The fetch API is the standard for requesting and sending data.
+            </li>
+            <li>
+                Fetch uses promises to avoid callback issues.
+            </li>
+            <li>
+                fetch() has only one mandatory argument, the URL being fetched.
+            </li>
+            <li>
+                Fetch uses promises, so the catch statement can deal with errors.
+            </li>
+            <li>
+                The response interface for fetch has an ‘ok’ property that is true if the response was
+                successful/created.
+            </li>
+            <li>
+                The redirect() method can be used to redirect to another URL.
+            </li>
+            <li>
+                text() method takes a stream of text and returns a promise.
+            </li>
+            <li>
+                blob() reads a file of raw data, such as an image or a spreadsheet. The promise resolves with a blob
+                object.
+            </li>
+            <li>
+                JSON is the most common format for AJAX responses. json() transforms a stream of JSON into a promise.
+            </li>
+            <li>
+                You can create your own response object using a constructor: const response = new Response(“”,{});
+            </li>
+            <li>
+                By providing a Request object you get more control over the request being made.
+            </li>
+            <li>
+                There are five commonly used HTTP verbs (methods): GET, POST, PUT, PATCH, DELETE
+            </li>
+            <li>
+                HTTP headers pass on additional information about a request or response.
+            </li>
+            <li>
+                AJAX can also be used to send information to a server.
+            </li>
+            <li>
+                AJAX is a living standard, meaning it is developed in the wild. It can and will change as feedback is
+                provided about how it works.
+            </li>
+            <li>
+                If you don’t want to deal with the “wild”, libraries like jQuery can handle your AJAX requests.
+            </li>
+
+        </ul>
+    </main>
+    <Footer>
+        <a href="index.html">Return to Week 7</a>
+    </Footer>
+    <script>
+
+    </script>
+</body>
+
+</html>
