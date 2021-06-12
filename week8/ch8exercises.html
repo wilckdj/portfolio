@@ -29,7 +29,7 @@
     <main>
         <h2 class="mainTitle">Week 8 Notes</h2>
         <h3>Chapter 8</h3>
-
+        <p>Hover elements</p>
         <div class="cssArea">
             <div id="obj1"></div>
             <div id="obj2"></div>
@@ -37,11 +37,126 @@
             <div id="obj4"></div>
             <div id="obj5"></div>
         </div>
+        <p>Automatic animation</p>
         <div class="cssArea">
             <div id="obj6"></div>
         </div>
         <ul>
-            
+            <li>
+                The CSS3 transform property lets you translate, rotate, scale, and/or skew any element.
+            </li>
+            <li>
+                The value of the transform property is one or more transform functions applied in the order provided.
+            </li>
+            <li>
+                Translation functions allow you to move elements left, right, up, or down. These are similar to the
+                behavior of position:relative.
+            </li>
+            <li>
+                Translate(x,y) moves objects left-right (x) and top-bottom (y)
+            </li>
+            <li>
+                translatex or translaty functions can be used to move on only one axis.
+            </li>
+            <li>
+                Transforms don’t work on inline elements.
+            </li>
+            <li>
+                scale(x,y) scales the element by defined factors horizontally then vertically. Can also specify scalex()
+                or scaley()
+            </li>
+            <li>
+                Don’t declare multiple transforms, because the second overrides the first. Add additional
+                transformations to the end.
+            </li>
+            <li>
+                rotate() rotates an element around the point of origin (default is center) by a specified angle.
+            </li>
+            <li>
+                skew(x,y) skews an element along the x and y axes.
+            </li>
+            <li>
+                These effects can be mimicked with other css properties.
+            </li>
+            <li>
+                Transitions allow simple animations to occur using only css.
+            </li>
+            <li>
+                Transitions use three steps: Declare original state, declare final state, include transition functions.
+            </li>
+            <li>
+                'transition:' can be used as shorthand to declare all transition properties.
+                <ul>
+                    <li>
+                        transition-property specifies the property that the transition is applied to.
+                    </li>
+                    <li>
+                        transition-duration is how long the transition will take. Can be specified with seconds (s) or
+                        milliseconds (ms)
+                    </li>
+                    <li>
+                        transition-timing-function specifies how the pace of the transition acts, whether it is
+                        constant, starts
+                        fast, or ends fast, etc.
+                    </li>
+                    <li>
+                        transition-delay introduces a delay before the transition begins. Specified with s or ms.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                multiple transitions can be called with the individual properties or the shorthand, separated by commas.
+            </li>
+            <li>
+                the all keyword can allow all properties to transition with the same rate, speed and delay.
+            </li>
+            <li>
+                To create a css animation, first create a named animation then attach it to an element.
+            </li>
+            <li>
+                @keyframes are used to define the start and end frames of an animation.
+            </li>
+            <li>
+                keyframes use two keyterms, from and to, which evaluate to 0% and 100%, for how far aong the animation
+                each keyframe is located.
+            </li>
+            <li>
+                animations have the following properties:
+                <ul>
+                    <li>
+                        animation-name: used to attach a keyframes animation to an element.
+                    </li>
+                    <li>
+                        animation-duration: length of time in seconds or milliseconds for animation to go from 0% to
+                        100%.
+                    </li>
+                    <li>
+                        animation-timing-function: determines how the animation progresses over its duration. Can use
+                        steps()
+                    </li>
+                    <li>
+                        animation-iteration-count: how many times the animation will play through, can use ‘infinite’
+                    </li>
+                    <li>
+                        animation-direction: changes the playthrough direction using normal, reverse, alternate, etc.
+                    </li>
+                    <li>
+                        animation-delay: delay the start of the animation.
+                    </li>
+                    <li>
+                        animation-fill-mode: defines what happens before the first animation begins and after the last
+                        aniation ends.
+                    </li>
+                    <li>
+                        animation-play-state: defines whether the animation is running or paused.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Shorthand uses ‘animation:’
+            </li>
+
+
         </ul>
     </main>
     <Footer>
