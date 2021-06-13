@@ -37,8 +37,6 @@ function fetchData(fetchURL) {
                 if(pageURLprev !== null && pageURLprev.search('https:') <0) {
                     pageURLprev = pageURLprev.replace('http:', 'https:')
                 }
-                console.log(pageURLnext)
-                console.log(pageURLprev)
                 obj.forEach(item => {
                     let lItem = document.createElement("li");
                     lItem.textContent = item[1].name;
