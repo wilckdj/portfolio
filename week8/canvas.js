@@ -31,12 +31,12 @@ function drawCircle() {
     context.stroke();
 }
 
-function saveDrawing() {
-    var canvas4 = document.getElementById("demo4");
-    window.open(canvas4.toDataURL("image/png"));
-}
-let button = document.getElementById("saveButton");
-button.addEventListener("click", saveDrawing, false);
+// function saveDrawing() {
+//     var canvas4 = document.getElementById("demo4");
+//     window.open(canvas4.toDataURL("image/png"));
+// }
+// let button = document.getElementById("saveButton");
+// button.addEventListener("click", saveDrawing, false);
 
 window.addEventListener("load", drawImageToCanvas, false);
 window.addEventListener("load", manipulateImage, false);
