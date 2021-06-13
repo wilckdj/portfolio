@@ -1,0 +1,8 @@
+.myCanvas {
+    border: dotted 2px black;
+}
+svg {
+    border: dotted 2px black;
+    width: 30%;
+    height: 30%;
+}

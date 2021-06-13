@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week # Chapter ##</title>
+    <title>Week 8 Chapter 12</title>
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/small.css">
     <link rel="stylesheet" href="../css/medium.css">
+    <link rel="stylesheet" href="canvas.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -26,19 +27,147 @@
         </H1>
     </header>
     <main>
-        <h2 class="mainTitle">Week # Notes</h2>
-        <H3>Chapter ##</H3>
-        <p>Some examples are in the console and code comments. </p>
+        <h2 class="mainTitle">Week 8 Notes</h2>
+        <H3>Chapter 12</H3>
+        <h4>Click on a canvas to load the image.</h4>
+        <canvas id="myCanvas" class="myCanvas" width="200" height="200">
+            Sorry! Your browser doesn’t support Canvas.
+        </canvas>
+        <canvas id="demo3" class="myCanvas" width="200" height="200" onclick="drawGradient()">
+            Sorry! Your browser doesn’t support Canvas.
+        </canvas>
+        <canvas id="demo4" class="myCanvas" width="200" height="200" onclick="drawCircle()">
+            Sorry! Your browser doesn’t support Canvas.
+        </canvas>
+        <button name="saveButton" id="saveButton">Save Drawing</button>
+        <h4>Drawing an image to the canvas</h4>
+        <canvas width="200" height="200" id="demo6" class="myCanvas">
+            Sorry! Your browser doesn't support Canvas.
+        </canvas>
+        <canvas width="200" height="200" id="demo7" class="myCanvas">
+            Sorry! Your browser doesn't support Canvas.
+        </canvas>
+        <img src="logo.png" id="myImageElem">
+        <h4>Scalable Vector Graphics (SVG)</h4>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+                <circle cx="50" cy="50" r="25" fill="darkred" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 400 400">
+                <desc>Drawing a rectangle</desc>
+                <rect x="10" y="10" width="100" height="100" fill="blue" stroke="red" stroke-width="3" />
+
+            </svg>
+        </div>
         <ul>
-            
+            <li>
+                The HTML Canvas API is used to draw images through JavaScript.
+            </li>
+            <li>
+                Canvas can improve the performance of websites by avoiding the need to download images off the network.
+            </li>
+            <li>
+                Canvas was first developed by Apple, so it is similar to Quarts 2D.
+            </li>
+            <li>
+                The canvas element is put straight into the HTML, with the size declared in HTML instead of CSS.
+            </li>
+            <li>
+                The canvas is selected and manipulated through JavaScript.
+            </li>
+            <li>
+                You set the strokeStyle and fillStyle attributes with the desired colors prior to actually drawing the
+                image.
+            </li>
+            <li>
+                You can draw rectangles with fillRect() and strokeRect()
+            </li>
+            <li>
+                Shapes can be filled with patterns instead of solid colors, such as images or gradients.
+            </li>
+            <li>
+                Other shapes can be drawn by creating paths. Paths create a blueprint for your lines, arcs, and shapes.
+            </li>
+            <li>
+                You can save canvas drawings to a URL, which can allow them to be saved locally.
+            </li>
+            <li>
+                You can draw specific images to a canvas as well using drawImage()
+            </li>
+            <li>
+                Images in the canvas can be manipulated to do things such as alter the color style to black and white,
+                or some other style.
+            </li>
+            <li>
+                Similarly, videos can be color-changed with canvas manipulation.
+            </li>
+            <li>
+                Canvas can also allow text to be displayed, such as for error handling.
+            </li>
+            <li>
+                Canvas doesn’t create a DOM node, so it is essentially invisible to tools like screen readers.
+            </li>
+            <li>
+                Scalable Vector Graphics (SVG) are images that preserve their quality even as they blow up or shrink
+                down.
+            </li>
+            <li>
+                SVG can do many of the same things as canvas including drawing paths, shapes, text, gradients, and
+                patterns.
+            </li>
+            <li>
+                Drawing a circle in SVG is much easier than in canvas. It uses the <circle> tag.
+            </li>
+            <li>
+                Drawing a rectangle is done using the <rect> tag.
+            </li>
+            <li>
+                Canvas allows for pixel manipulation but operates in immediate mode. Meaning, once a shape is created it
+                cannot be accessed, it would need to be redrawn.
+            </li>
+            <li>
+                Canvas can allow the image to be saves as a PNG or JPEG file.
+            </li>
+            <li>
+                Canvas is faster than SVG.
+            </li>
+            <li>
+                SVG operates in retained mode, meaning that the structure of the image is preserved in the XML document.
+            </li>
+            <li>
+                SVG has a more complete set of tools, but SVG cannot manipulate pixels as canvas does.
+            </li>
+            <li>
+                Drag and Drop is an API that allows certain elements to be draggable and then to specify what happens
+                when they are dropped onto other elements.
+            </li>
+            <li>
+                Drag and Drop is not supported by Android or IOS, therefore it is not useful for mobile applications.
+            </li>
+            <li>
+                Drag and Drop can be combined with the File API to allow files to be dragged from a desktop onto the
+                website.
+            </li>
+            <li>
+                The draggable attribute is added to an element. Because it isn’t a Boolean attribute it must be
+                explicitly set to true.
+            </li>
+            <li>
+                A dragstart event listener should be added to the draggable items.
+            </li>
+            <li>
+                both dragover and drop event listeners can be added to the elements that the draggable items would be
+                dropped on.
+            </li>
+            <li>
+                Drag and drop would be great for a card game application.
+            </li>
         </ul>
     </main>
     <Footer>
-        <a href="index.html">Return to Week #</a>
+        <a href="index.html">Return to Week 8</a>
     </Footer>
-    <script>
-
-    </script>
+    <script src="canvas.js"></script>
 </body>
 
 </html>
