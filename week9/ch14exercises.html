@@ -28,16 +28,170 @@
     <main>
         <h2 class="mainTitle">Week 9 Notes</h2>
         <H3>Chapter 14</H3>
-        <p>Some examples are in the console and code comments. </p>
+        <ol>
+            <li>
+                <a href="factors.html">factors.html</a> - Web Workers Example
+            </li>
+            <li>
+                <a href="websocket.html">websocket.html</a> - Websocket Example
+            </li>
+        </ol>
+
         <ul>
-            
+            <li>
+                HTML5 is the latest version of HTML for creating webpages.
+            </li>
+            <li>
+                Many APIs were made available in HTML5 and beyond.
+            </li>
+            <li>
+                The HTML5 specification is separated into modules that allow different features to be implemented
+                without having to wait for others to be completed.
+            </li>
+            <li>
+                The ‘data-‘ attribute is a way of embedding data in a web page using custom attributes that are ignored
+                by the browser. They are private to a page.
+            </li>
+            <li>
+                They must contain only lowercase letters, numbers, hyphens, dots, colons or underscores.
+            </li>
+            <li>
+                each element has a dataset property that can be sued to access any ‘data-‘ attribute it contains.
+            </li>
+            <li>
+                ’data-powers’ is accessed by ‘.dataset.powers’. ‘data-max-length’ is accessed by ‘dataset.maxLength’.
+            </li>
+            <li>
+                you could also still use .getAttribute(‘data-powers’);
+            </li>
+            <li>
+                APIs help developers access and control new features that appear in the latest devices. It is best
+                practice to use feature detection before using any of the API methods.
+            </li>
+            <li>
+                Web Storage API (localStorage) is similar to cookies but has differences.
+            </li>
+            <li>
+                Web Storage does not have an actual data limit, but most browsers limit it at 5GB per domain.
+            </li>
+            <li>
+                Stored data does not automatically expire as with cookies.
+            </li>
+            <li>
+                If web storage is supported, window will have localStorage and sessionStorage. Local Storage is more
+                permenant, sessionStorage is only for the current session.
+            </li>
+            <li>
+                localStorage can trigger event listeners through the ‘storage’ event that can report the .key,
+                .oldValue. newValue, and .storageArea.
+            </li>
+            <li>
+                The Geolocation API is used to obtain the geographical position of the device. It can find the user’s
+                exact location then link to nearby places.
+            </li>
+            <li>
+                navigator.geolocation.getCurrentPosition(); can return your position object.
+            </li>
+            <li>
+                The position object has several properties:
+                <ul>
+                    <li>
+                        position.coords.latitude (.longitude)
+                    </li>
+                    <li>
+                        position.speed - ground speed of the device, meters per second.
+                    </li>
+                    <li>
+                        position.altitude - estimate of the devices altitude in meters above the WGS84 ellipsoid.
+                    </li>
+                    <li>
+                        position.heading – the direction the device is moving in. In degrees, clockwise from North.
+                    </li>
+                    <li>
+                        position.timestamp – the time the position was recorded.
+                    </li>
+                    <li>
+                        position.accuracy (position.altitudeAccuracy) – how accurate the returned values are.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                navigator.geolocation.watchposition() will call a function every time the position of the device is
+                updated.
+            </li>
+            <li>
+                navigator.geolocation.clearWatch() stops the callback from being called.
+            </li>
+            <li>
+                Web workers allow processes to be run in the background adding support for concurrency in JavaScript.
+            </li>
+            <li>
+                Workers are created using the Worker() constructor function.
+            </li>
+            <li>
+                Workers use the concept of messages to communicate back and forth between the main script and the worker
+                script.
+            </li>
+            <li>
+                Messages are posed with worker.postMessage(“hello”); they can be listened for with event listeners for
+                “message” events.
+            </li>
+            <li>
+                Workers can be terminated after the tasks are completed, using .terminate() from the main script or
+                self.close() from the worker script.
+            </li>
+            <li>
+                Shared Web Workers allow lots of different scripts on the same domain to access the same worker object.
+            </li>
+            <li>
+                Service Workers API allows a worker script to run in the background with the added benefit of being able
+                to intercept network requests.
+            </li>
+            <li>
+                Websocket is a protocol that allows two-way communication with a server – push messaging.
+            </li>
+            <li>
+                Websocket uses event listeners and responses from a server to work.
+            </li>
+            <li>
+                Notification API allows you to show messages using the system’s notifications. Such as a popup in the
+                corner of the screen.
+            </li>
+            <li>
+                Before notifications can be sent, permission must be granted by the user.
+                Notification.requestPermission() returns a promis with the permission property set either to granted or
+                denied.
+            </li>
+            <li>
+                Multimedia (audio and video) is also available through HTML5.
+            </li>
+            <li>
+                The ‘audio’ and ‘video’ tags insert audio and video clips into a web page. The text between the tags
+                will only display if the browser does not support them.
+            </li>
+            <li>
+                Both the audio and video elements have many properties and methods to control the playback, change
+                volume, and otherwise affect the media.
+            </li>
+
+
         </ul>
     </main>
     <Footer>
         <a href="index.html">Return to Week 9</a>
     </Footer>
     <script>
-
+        if (window.Notification) {
+            Notification.requestPermission();
+        }
+        if (window.Notification) {
+            Notification.requestPermission()
+                .then((permission) => {
+                    if (Notification.permission === 'granted') {
+                        new Notification('Hello JavaScript!');
+                    }
+                });
+        }
     </script>
 </body>
 

@@ -29,6 +29,7 @@
         <h2 class="mainTitle">Week 9 Notes</h2>
         <H3>Chapter 9</H3>
         <a href="animation.html">animation.html</a> - Animation example using JavaScript.
+        <p>Some examples are in the console. </p>
         <ul>
             <li>
                 In the browser environment, the global object is the ‘window’ object, or the window that contains a web
@@ -149,7 +150,24 @@
         <a href="index.html">Return to Week 9</a>
     </Footer>
     <script>
+        document.cookie = "name=Superman";
+        document.cookie = "hero=true";
+        document.cookie = "city=Metropolis";
 
+        const cookies = document.cookie.split("; ");
+        for (crumb of cookies) {
+            const [key, value] = crumb.split("=");
+            console.log(`The value of ${key} is ${value}`);
+        }
+
+        window.setTimeout( () => console.log("Time's Up!"), 10000);
+        function chant(){ console.log('Beetlejuice'); }
+        const summon = window.setInterval(chant,1000);
+
+        window.setTimeout( () => {
+            window.clearInterval(summon); 
+            console.log("The chanting has ceased.")
+        }, 5999)
     </script>
 </body>
 

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Websocket Example</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/small.css">
+    <link rel="stylesheet" href="../css/medium.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#395b50">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#395b50">
+</head>
+
+<body>
+    <header>
+        <H1>
+            WDD 330 Portfolio
+        </H1>
+    </header>
+    <main>
+        <h2 class="mainTitle">Websocket Example</h2>
+        <form>
+            <label for='message'>Enter a Message:</label>
+            <input type='text' name='message'>
+            <button type='submit'>Submit</button>
+        </form>
+        <div id='output'></div>
+    </main>
+    <Footer>
+        <a href="index.html">Return to Chapter 14 Notes</a>
+    </Footer>
+
+
+    <script>
+        const URL = 'wss://echo.websocket.org/';
+        const outputDiv = document.getElementById('output');
+        const form = document.forms[0];
+        const connection = new WebSocket(URL);
+        connection.addEventListener('open', () => {
+            output('CONNECTED');
+        }, false);
+
+        function output(message) {
+            const para = document.createElement('p');
+            para.innerHTML = message;
+            outputDiv.appendChild(para);
+        }
+        form.addEventListener('submit', message, false);
+
+        function message(event) {
+            event.preventDefault();
+            const text = form.message.value;
+            output(`SENT: ${text}`);
+            connection.send(text);
+        }
+
+        connection.addEventListener('message', (event) => {
+            output(`RESPONSE: ${event.data}`);
+        }, false);
+
+        connection.addEventListener('close', () => {
+            output('DISCONNECTED');
+        }, false);
+        connection.addEventListener('error', (event) => {
+            output(`<span style='color: red;'>ERROR: ${event.data}</span>`);
+        }, false);
+    </script>
+</body>
+
+</html>
