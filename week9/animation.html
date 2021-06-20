@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Example</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/small.css">
+    <link rel="stylesheet" href="../css/medium.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#395b50">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#395b50">
+    <style>
+        #square {
+            margin: 100px;
+            width: 100px;
+            height: 100px;
+            background: #d16;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <H1>
+            WDD 330 Portfolio
+        </H1>
+    </header>
+    <main>
+        <h2 class="mainTitle">Animation Example</h2>
+        <div id='square'></div>
+    </main>
+    <Footer>
+        <a href="index.html">Return to Chapter 9 Notes</a>
+    </Footer>
+    <script>
+        const squareElement = document.getElementById('square');
+        let angle = 0;
+
+        function rotate() {
+            angle = (angle + 2) % 360;
+            squareElement.style.transform = `rotate(${angle}deg)`
+            window.requestAnimationFrame(rotate);
+        }
+        const id = requestAnimationFrame(rotate);
+    </script>
+</body>
+
+</html>

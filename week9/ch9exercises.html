@@ -28,9 +28,121 @@
     <main>
         <h2 class="mainTitle">Week 9 Notes</h2>
         <H3>Chapter 9</H3>
-        <p>Some examples are in the console and code comments. </p>
+        <a href="animation.html">animation.html</a> - Animation example using JavaScript.
         <ul>
-            
+            <li>
+                In the browser environment, the global object is the ‘window’ object, or the window that contains a web
+                page.
+            </li>
+            <li>
+                Browser Object Model (BOM) is a collection of properties and methods.
+            </li>
+            <li>
+                We can find out which browser is used, the screen dimensions, browsing history, and create pop-ups.
+            </li>
+            <li>
+                Global variables are properties of the global object or the window object.
+            </li>
+            <li>
+                window.alert() will pause the execution of the program and display a message.
+            </li>
+            <li>
+                window.confirm() will stop execution with a confirmation dialog that provides a message and options of
+                OK or Cancel.
+            </li>
+            <li>
+                window.prompt() will stop execution and display a prompt with an input field.
+            </li>
+            <li>
+                window.navigator.userAgent returns information about the browser and operating system being used.
+            </li>
+            <li>
+                window.location.href returns information about the URL of the current page.
+            </li>
+            <li>
+                window.location.protocol returns the protocol used, .host returns the domain of the current URL,
+                .pathname returns the site path. There are plenty of other location properties and methods.
+            </li>
+            <li>
+                window.location.reload() can force a reload of current page, with the parameter of true it will force a
+                reload from the server.
+            </li>
+            <li>
+                window.history can be used to access information about any previously visited pages in the current
+                broser session.
+            </li>
+            <li>
+                window.history.go() can be used to go to a specific page, 0 is the current page. Can also use .forward()
+                and .back()
+            </li>
+            <li>
+                window.open() can be used to open the URL listed in the parameter. .close() can close the window.
+            </li>
+            <li>
+                window.moveTo() moves a window to the x and y coordinates provided.
+            </li>
+            <li>
+                window.resizeTo() can adjust the width and heigh of the window.
+            </li>
+            <li>
+                window.screen object contains information about the screen the browser is displayed on.
+            </li>
+            <li>
+                the document object is contained in the window and has its own properties and methods.
+            </li>
+            <li>
+                document.write() is heavily frowned on and hardly ever used.
+            </li>
+            <li>
+                Cookies are small files that are saved locally on a user’s computer. Cookies can only be read by a web
+                page from the same domain that set them.
+            </li>
+            <li>
+                20 cookies are allowed per domain, at 4KB of data each.
+            </li>
+            <li>
+                Cookies are created using document.cookie. By assigning another cookie, it won’t overwrite the entire
+                property, but instead will append it to the end of the string.
+            </li>
+            <li>
+                To change a cookie, you assign a different value with the same name: “name=Batman”, “name=Superman”
+            </li>
+            <li>
+                To read the cookies, enter document.cookie.
+            </li>
+            <li>
+                You can use the split method to break the string into an array containing each name/value pair.
+            </li>
+            <li>
+                By default cookies are deleted once a browser session is finished. By adding “; expires=date” to the end
+                of the cookie, the cookies can last longer until the given UTC date.
+            </li>
+            <li>
+                You could also set the max-age of a cookie in seconds.
+            </li>
+            <li>
+                You can set a specified path for a cookie or a specified domain so that all subdomains of the website
+                can read it.
+            </li>
+            <li>
+                Adding “; secure” to the end of a cookie will ensure its only transmitted over a secure HTTPS network.
+            </li>
+            <li>
+                To manually delete a cookie, you set it to expire at a time in the past.
+            </li>
+            <li>
+                window.setTimeout() accepts a callback to a function and the number of milliseconds until it is called.
+            </li>
+            <li>
+                window.clearTimeout() cancels the timeout. IT must use the same timeout id that was provided to cancel
+                it.
+            </li>
+            <li>
+                window.setInterval() repeateduly invokes the callback function after every given number of milliseconds.
+            </li>
+            <li>
+                setTimeOut() and setInterval() methods can be used to animate elements on a web page.
+            </li>
         </ul>
     </main>
     <Footer>
