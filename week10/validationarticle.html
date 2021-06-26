@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10 Validating Forms</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/small.css">
+    <link rel="stylesheet" href="../css/medium.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#395b50">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#395b50">
+    <style></style>
+</head>
+
+<body>
+    <header>
+        <H1>
+            WDD 330 Portfolio
+        </H1>
+    </header>
+    <main>
+        <h2 class="mainTitle">Week 10 Notes</h2>
+        <H3>Validating Forms</H3>
+        <ol>
+            <li>
+                <a href="fruit-start.html">HTML Validation Form Example</a>
+            </li>
+            <li>
+                <a href="emailvalidate.html">JavaScript Validation Form Example</a>
+            </li>
+        </ol>
+        <ul>
+            <li>
+                Client-side form validation ensures that the data submitted to the server matches the requirements set
+                forth in the controls.
+            </li>
+            <li>
+                Client-side validation should not be considered an exhaustive security measure. The apps should always
+                perform checks on any form-submitted data on the server-side as will.
+            </li>
+            <li>
+                Form validation is when the form provides a message to the user that the information is incorrect or
+                incomplete.
+            </li>
+            <li>
+                The form submission should only occur if the information is correctly formatted.
+            </li>
+            <li>
+                Built-in form validation uses HTML5 validation features.
+            </li>
+            <li>
+                JavaScript form validation is coded using JavaScript and is completely customizable.
+            </li>
+            <li>
+                The HTML5 form validation features are:
+                <ul>
+                    <li>
+                        required: the form must be filled in.
+                    </li>
+                    <li>
+                        minlength and maxlength: specify min and max length of text strings.
+                    </li>
+                    <li>
+                        min and max: specify min and max of numerical values.
+                    </li>
+                    <li>
+                        type: specify data type
+                    </li>
+                    <li>
+                        pattern: specify a regexp that defines a pattern for the entered data to follow.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Valid html elements gain the :valid CSS pseudo-class
+            </li>
+            <li>
+                Invalid html elements gain the :invalid CSS pseudo-class.
+            </li>
+            <li>
+                It is required by the WCAG accessibility guidelines to indicate which form fields are required. You
+                should only require users to input data that is actually needed.
+            </li>
+            <li>
+                Regular expressions (regexps) are a pattern that can be used to match character combinations in text
+                strings.
+            </li>
+            <li>
+                Regexps are case-sensitive, but you can use make them accept both capitalized and lowercase using an
+                [Aa] pattern.
+            </li>
+            <li>
+                Instead of using a regexp, you can sometimes specify a specific type, such as the email type, to
+                indicate the formatting pattern.
+            </li>
+            <li>
+                Number inputs can include number ranges using min and max, and also a step attribute for incrementing by
+                certain amounts.
+            </li>
+            <li>
+                There are different ways to use JavaScript for validation.
+            </li>
+            <li>
+                The Constraint Validation API provides form element DOM interfaces and properties for them.
+            </li>
+            <li>
+                The constraint validation API can allow customization of error messages.
+            </li>
+            <li>
+                If you choose to use the constraint validation API, it won’t work on all old browsers. Everything done
+                with the API can be mimicked with normal HTML, CSS, and JavaScript.
+            </li>
+
+
+        </ul>
+    </main>
+    <Footer>
+        <a href="index.html">Return to Week 10</a>
+    </Footer>
+    <script>
+
+    </script>
+</body>
+
+</html>

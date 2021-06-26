@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10 Using Fetch</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/small.css">
+    <link rel="stylesheet" href="../css/medium.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#395b50">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#395b50">
+    <style></style>
+</head>
+
+<body>
+    <header>
+        <H1>
+            WDD 330 Portfolio
+        </H1>
+    </header>
+    <main>
+        <h2 class="mainTitle">Week 10 Notes</h2>
+        <H3>Using Fetch</H3>
+
+        <ul>
+            <li>
+                The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline.
+            </li>
+            <li>
+                The API provides a global fetch() method that provides a way to fetch resources asynchronously across
+                the network.
+            </li>
+            <li>
+                The promise returned from fetch() won’t reject on HTTP error status.
+            </li>
+            <li>
+                fetch() won’t send cross-origin cookies.
+            </li>
+            <li>
+                A basic fetch request is set up as: fetch().then().then()
+            </li>
+            <li>
+                The fetch method can optionally accept a second parameter: an ‘init’ object that controls many settings.
+                <ul>
+                    <li>
+                        the init object is contained in {}.
+                    </li>
+                    <li>
+                        some of the options available are: ‘method’, ‘mode’, ‘cache’, ‘credentials’, ‘headers’,
+                        ‘redirect’, ‘referrerPolicy’, and ‘body’.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                You can send credentials with a fetch requeqst by including “credentials: ‘include’” or “credentials:
+                ‘same-origin’” in the init object.
+            </li>
+            <li>
+                To ensure the browsers don’t include credentials, use “credentials: ‘omit’”.
+            </li>
+            <li>
+                You can use the fetch() method to POST JSON-encoded data.
+            </li>
+            <li>
+                One or multiple Files can be uploaded using the input element with a file type, FormData() and fetch().
+            </li>
+            <li>
+                Using the fetch API, you can process a text file line by line using a line iterator.
+            </li>
+            <li>
+                To check if a fetch() was successful, check that the promise resulved then check that the Response.ok
+                property is true.
+            </li>
+            <li>
+                Instead of passing a path to the resource you want to request, you can create a request object using the
+                Request() constructor and pass that into the fetch()
+            </li>
+            <li>
+                The Headers interface allows you to create your own headers object via the Headers() constructor.
+            </li>
+            <li>
+                Because headers can be sent in requests and received in responses, the headers objects have a guard
+                property.
+            </li>
+            <li>
+                Possible guard values are: ‘none’, ‘request’, ‘request-no-cors’, ‘response’, and ‘immutable’.
+            </li>
+            <li>
+                Response properties can be created programmatically via JavaScript.
+            </li>
+            <li>
+                The Response() constructor takes two optional arguments, a body for the response, and an init object.
+            </li>
+            <li>
+                A body is data contained by a request or response.
+            </li>
+            <li>
+                Fetch API support can be detected by checking for the existence of Headers, Request, Response, or
+                fetch() on the Window scope.
+            </li>
+
+
+        </ul>
+    </main>
+    <Footer>
+        <a href="index.html">Return to Week 10</a>
+    </Footer>
+    <script>
+        // // supplying request options
+        // // Example POST method implementation:
+        // async function postData(url = '', data = {}) {
+        //     // Default options are marked with *
+        //     const response = await fetch(url, {
+        //         method: 'POST', // *GET, POST, PUT, DELETE, etc.
+        //         mode: 'cors', // no-cors, *cors, same-origin
+        //         cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+        //         credentials: 'same-origin', // include, *same-origin, omit
+        //         headers: {
+        //             'Content-Type': 'application/json'
+        //             // 'Content-Type': 'application/x-www-form-urlencoded',
+        //         },
+        //         redirect: 'follow', // manual, *follow, error
+        //         referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+        //         body: JSON.stringify(data) // body data type must match "Content-Type" header
+        //     });
+        //     return response.json(); // parses JSON response into native JavaScript objects
+        // }
+
+        // postData('https://example.com/answer', {
+        //         answer: 42
+        //     })
+        //     .then(data => {
+        //         console.log(data); // JSON data parsed by `data.json()` call
+        //     });
+
+
+        // fetch('https://example.com', {
+        //     credentials: 'include'
+        // });
+
+        //Uploading JSON Data
+        // const data = {
+        //     username: 'example'
+        // };
+
+        // fetch('https://example.com/profile', {
+        //         method: 'POST', // or 'PUT'
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //         },
+        //         body: JSON.stringify(data),
+        //     })
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         console.log('Success:', data);
+        //     })
+        //     .catch((error) => {
+        //         console.error('Error:', error);
+        //     });
+
+        // const myHeaders = new Headers();
+
+        // const myRequest = new Request('flowers.jpg', {
+        //     method: 'GET',
+        //     headers: myHeaders,
+        //     mode: 'cors',
+        //     cache: 'default',
+        // });
+
+        // fetch(myRequest)
+        //     .then(response => response.blob())
+        //     .then(myBlob => {
+        //         myImage.src = URL.createObjectURL(myBlob);
+        //     });
+
+        if (window.fetch) {
+
+            fetch('flowers.jpg')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.blob();
+                })
+                .then(myBlob => {
+                    myImage.src = URL.createObjectURL(myBlob);
+                })
+                .catch(error => {
+                    console.error('There has been a problem with your fetch operation:', error);
+                });
+
+        } else {
+            // do something with XMLHttpRequest?
+        }
+    </script>
+</body>
+
+</html>
