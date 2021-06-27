@@ -1,0 +1,61 @@
+.gameboard {
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 35em;
+    width: 80%;
+    margin: auto;
+    background-color: #395b50;
+    position: relative;
+}
+.gameboard > * {
+    margin: auto 5%;
+}
+
+.pile {
+    border: 1px dotted gray;
+    min-width: 50px;
+    min-height: 70px;
+    border-radius: 5px;
+}
+
+.goal {
+    position: relative;
+    top: 125px;
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+/* .goal > .pile{
+    background-color: rgba(255, 255, 255, 0.5);
+} */
+
+.play {
+    position: relative;
+    top: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.deck {
+    position: absolute;
+    top: 25px;
+    display: flex;
+    gap: 5%;
+}
+
+.controls {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.stats {
+    position: absolute;
+    bottom: 25px;
+
+}
