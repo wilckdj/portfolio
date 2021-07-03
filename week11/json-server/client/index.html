@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 11 Team Activity - Authentication</title>
+    <link rel="stylesheet" href="../../../css/normalize.css">
+    <link rel="stylesheet" href="../../../css/small.css">
+    <link rel="stylesheet" href="../../../css/medium.css">
+    <link rel="stylesheet" href="week11.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#395b50">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#395b50">
+
+</head>
+
+<body>
+    <header>
+        <H1>
+            WDD 330 Portfolio
+        </H1>
+    </header>
+    <main>
+        <h2 class="mainTitle">Log In Authentication</h2>
+        <div id="errors" class="errors hidden"></div>
+        <div id="login">
+            <form>
+                <div>
+                    <label for="username"> Email (Username):
+                        <input type="text" id="username" class="form-control" placeholder="user@email.com">
+                    </label>
+                </div>
+                <div>
+                    <label for="password"> Password:
+                        <input type="text" id="password" class="form-control" placeholder="password">
+                        <!-- type = password -->
+                    </label>
+                </div>
+                <button type="button" id="subButton">Log In</button>
+            </form>
+            <div id="token-display"></div>
+        </div>
+
+        <div id="content" class="hidden">
+            <form name="postForm">
+                <div>
+                    <label for="title">Title
+                        <input type="text" class="form-control" name="title" placeholder="title" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="content">Content
+                        <input type="text" class="form-control" name="content" placeholder="content" required>
+                    </label>
+                </div>
+                <div id="postError"></div>
+                <button type="submit" id="createSubmit">Submit</button>
+            </form>
+            <ul id='list'></ul>
+        </div>
+    </main>
+    <Footer>
+        <a href="../../index.html">Return to Week 11</a>
+    </Footer>
+    <script src="week11.js" type="module"></script>
+</body>
+
+</html>

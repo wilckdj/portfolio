@@ -50,6 +50,11 @@ const links = [{
         block: 2
     },
     {
+        label: "Week 11 Notes",
+        url: "week11/index.html",
+        block: 2
+    },
+    {
         label: "Project",
         url: "project/index.html",
         block: 2
