@@ -1,384 +1,381 @@
 {
     "cards": [{
-
             "id": "1",
             "name": "Joker 1",
             "symbol": "Joker1",
-            "numValue": 0,
+            "value": "JOKER",
             "color": "black"
         },
         {
             "id": "2",
             "name": "Joker 2",
             "symbol": "Joker2",
-            "numValue": 0,
+            "value": "JOKER",
             "color": "red"
         },
         {
             "id": "3",
             "name": "Ace of Spades",
             "symbol": "A&#9824",
-            "numValue": 1,
+            "value": "A",
             "color": "black"
         },
         {
             "id": "4",
             "name": "2 of Spades",
             "symbol": "2&#9824",
-            "numValue": 2,
+            "value": "2",
             "color": "black"
         },
         {
             "id": "5",
             "name": "3 of Spades",
             "symbol": "3&#9824",
-            "numValue": 3,
+            "value": "3",
             "color": "black"
         },
         {
             "id": "6",
             "name": "4 of Spades",
             "symbol": "4&#9824",
-            "numValue": 4,
+            "value": "4",
             "color": "black"
         },
         {
             "id": "7",
             "name": "5 of Spades",
             "symbol": "5&#9824",
-            "numValue": 5,
+            "value": "5",
             "color": "black"
         },
         {
             "id": "8",
             "name": "6 of Spades",
             "symbol": "6&#9824",
-            "numValue": 6,
+            "value": "6",
             "color": "black"
         },
         {
             "id": "9",
             "name": "7 of Spades",
             "symbol": "7&#9824",
-            "numValue": 7,
+            "value": "7",
             "color": "black"
         },
         {
             "id": "10",
             "name": "8 of Spades",
             "symbol": "8&#9824",
-            "numValue": 8,
+            "value": "8",
             "color": "black"
         },
         {
             "id": "11",
             "name": "9 of Spades",
             "symbol": "9&#9824",
-            "numValue": 9,
+            "value": "9",
             "color": "black"
         },
         {
             "id": "12",
             "name": "10 of Spades",
             "symbol": "10&#9824",
-            "numValue": 10,
+            "value": "10",
             "color": "black"
         },
         {
             "id": "13",
             "name": "Jack of Spades",
             "symbol": "J&#9824",
-            "numValue": 11,
+            "value": "J",
             "color": "black"
         },
         {
             "id": "14",
             "name": "Queen of Spades",
             "symbol": "Q&#9824",
-            "numValue": 12,
+            "value": "Q",
             "color": "black"
         },
         {
             "id": "15",
             "name": "King of Spades",
             "symbol": "K&#9824",
-            "numValue": 13,
+            "value": "K",
             "color": "black"
         },
         {
             "id": "16",
             "name": "Ace of Diamonds",
             "symbol": "A&#9830",
-            "numValue": 1,
+            "value": "A",
             "color": "red"
         },
         {
             "id": "17",
             "name": "2 of Diamonds",
             "symbol": "2&#9830",
-            "numValue": 2,
+            "value": "2",
             "color": "red"
         },
         {
             "id": "18",
             "name": "3 of Diamonds",
             "symbol": "3&#9830",
-            "numValue": 3,
+            "value": "3",
             "color": "red"
         },
         {
             "id": "19",
             "name": "4 of Diamonds",
             "symbol": "4&#9830",
-            "numValue": 4,
+            "value": "4",
             "color": "red"
         },
         {
             "id": "20",
             "name": "5 of Diamonds",
             "symbol": "5&#9830",
-            "numValue": 5,
+            "value": "5",
             "color": "red"
         },
         {
             "id": "21",
             "name": "6 of Diamonds",
             "symbol": "6&#9830",
-            "numValue": 6,
+            "value": "6",
             "color": "red"
         },
         {
             "id": "22",
             "name": "7 of Diamonds",
             "symbol": "7&#9830",
-            "numValue": 7,
+            "value": "7",
             "color": "red"
         },
         {
             "id": "23",
             "name": "8 of Diamonds",
             "symbol": "8&#9830",
-            "numValue": 8,
+            "value": "8",
             "color": "red"
         },
         {
             "id": "24",
             "name": "9 of Diamonds",
             "symbol": "9&#9830",
-            "numValue": 9,
+            "value": "9",
             "color": "red"
         },
         {
             "id": "25",
             "name": "10 of Diamonds",
             "symbol": "10&#9830",
-            "numValue": 10,
+            "value": "10",
             "color": "red"
         },
         {
             "id": "26",
             "name": "Jack of Diamonds",
             "symbol": "J&#9830",
-            "numValue": 11,
+            "value": "J",
             "color": "red"
         },
         {
             "id": "27",
             "name": "Queen of Diamonds",
             "symbol": "Q&#9830",
-            "numValue": 12,
+            "value": "Q",
             "color": "red"
         },
         {
             "id": "28",
             "name": "King of Diamonds",
             "symbol": "K&#9830",
-            "numValue": 13,
+            "value": "K",
             "color": "red"
         },
         {
             "id": "29",
             "name": "King of Clubs",
             "symbol": "K&#9827",
-            "numValue": 13,
+            "value": "K",
             "color": "black"
         },
         {
             "id": "30",
             "name": "Queen of Clubs",
             "symbol": "Q&#9827",
-            "numValue": 12,
+            "value": "Q",
             "color": "black"
         },
         {
             "id": "31",
             "name": "Jack of Clubs",
             "symbol": "J&#9827",
-            "numValue": 11,
+            "value": "J",
             "color": "black"
         },
         {
             "id": "32",
             "name": "10 of Clubs",
             "symbol": "10&#9827",
-            "numValue": 10,
+            "value": "10",
             "color": "black"
         },
         {
             "id": "33",
             "name": "9 of Clubs",
             "symbol": "9&#9827",
-            "numValue": 9,
+            "value": "9",
             "color": "black"
         },
         {
             "id": "34",
             "name": "8 of Clubs",
             "symbol": "8&#9827",
-            "numValue": 8,
+            "value": "8",
             "color": "black"
         },
         {
             "id": "35",
             "name": "7 of Clubs",
             "symbol": "7&#9827",
-            "numValue": 7,
+            "value": "7",
             "color": "black"
         },
         {
             "id": "36",
             "name": "6 of Clubs",
             "symbol": "6&#9827",
-            "numValue": 6,
+            "value": "6",
             "color": "black"
         },
         {
             "id": "37",
             "name": "5 of Clubs",
             "symbol": "5&#9827",
-            "numValue": 5,
+            "value": "5",
             "color": "black"
         },
         {
             "id": "38",
             "name": "4 of Clubs",
             "symbol": "4&#9827",
-            "numValue": 4,
+            "value": "4",
             "color": "black"
         },
         {
             "id": "39",
             "name": "3 of Clubs",
             "symbol": "3&#9827",
-            "numValue": 3,
+            "value": "3",
             "color": "black"
         },
         {
             "id": "40",
             "name": "2 of Clubs",
             "symbol": "2&#9827",
-            "numValue": 2,
+            "value": "2",
             "color": "black"
         },
         {
             "id": "41",
             "name": "Ace of Clubs",
             "symbol": "A&#9827",
-            "numValue": 1,
+            "value": "A",
             "color": "black"
         },
         {
             "id": "42",
             "name": "King of Hearts",
             "symbol": "K&#9829",
-            "numValue": 13,
+            "value": "K",
             "color": "red"
         },
         {
             "id": "43",
             "name": "Queen of Hearts",
             "symbol": "Q&#9829",
-            "numValue": 12,
+            "value": "Q",
             "color": "red"
         },
         {
             "id": "44",
             "name": "Jack of Hearts",
             "symbol": "J&#9829",
-            "numValue": 11,
+            "value": "J",
             "color": "red"
         },
         {
             "id": "45",
             "name": "10 of Hearts",
             "symbol": "10&#9829",
-            "numValue": 10,
+            "value": "10",
             "color": "red"
         },
         {
             "id": "46",
             "name": "9 of Hearts",
             "symbol": "9&#9829",
-            "numValue": 9,
+            "value": "9",
             "color": "red"
         },
         {
             "id": "47",
             "name": "8 of Hearts",
             "symbol": "8&#9829",
-            "numValue": 8,
+            "value": "8",
             "color": "red"
         },
         {
             "id": "48",
             "name": "7 of Hearts",
             "symbol": "7&#9829",
-            "numValue": 7,
+            "value": "7",
             "color": "red"
         },
         {
             "id": "49",
             "name": "6 of Hearts",
             "symbol": "6&#9829",
-            "numValue": 6,
+            "value": "6",
             "color": "red"
         },
         {
             "id": "50",
             "name": "5 of Hearts",
             "symbol": "5&#9829",
-            "numValue": 5,
+            "value": "5",
             "color": "red"
         },
         {
             "id": "51",
             "name": "4 of Hearts",
             "symbol": "4&#9829",
-            "numValue": 4,
+            "value": "4",
             "color": "red"
         },
         {
             "id": "52",
             "name": "3 of Hearts",
             "symbol": "3&#9829",
-            "numValue": 3,
+            "value": "3",
             "color": "red"
         },
         {
             "id": "53",
             "name": "2 of Hearts",
             "symbol": "2&#9829",
-            "numValue": 2,
+            "value": "2",
             "color": "red"
         },
         {
             "id": "54",
             "name": "Ace of Hearts",
             "symbol": "A&#9829",
-            "numValue": 1,
+            "value": "A",
             "color": "red"
         }
-
-
     ]
 }

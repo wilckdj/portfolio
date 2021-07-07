@@ -12,13 +12,13 @@
     <link rel="stylesheet" href="../css/small.css">
     <link rel="stylesheet" href="../css/medium.css">
     <link rel="stylesheet" href="cards.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#395b50">
     <meta name="msapplication-TileColor" content="#00aba9">
-    <meta name="theme-color" content="#395b50">
+    <meta name="theme-color" content="#395b50"> -->
 
 </head>
 
@@ -30,15 +30,15 @@
     </header>
     <main>
         <h2 class="mainTitle">Final Project</h2>
-        <div class="gameboard">
+        <div id="gameboard">
             <!-- Temporary game board structure for solitare -->
-            <div class="goal">
+            <div id="goal">
                 <div class="pile uniform">A</div>
                 <div class="pile uniform">B</div>
                 <div class="pile uniform">C</div>
                 <div class="pile uniform">D</div>
             </div>
-            <div class="play">
+            <div id="play">
                 <div class="pile alternate">1</div>
                 <div class="pile alternate">2</div>
                 <div class="pile alternate">3</div>
@@ -47,16 +47,16 @@
                 <div class="pile alternate">6</div>
                 <div class="pile alternate">7</div>
             </div>
-            <div class="deck">
-                <div class="pile">Deck</div>
+            <!-- <div id="deck">
+                <div class="pile" id = "draw">Deck</div>
                 <div class="pile">Discard</div>
 
-            </div>
-            <div class = "controls">
+            </div> -->
+            <div id = "controls">
                 <input type="button" value="Save Game">
                 <input type="button" value="Reset Game">
             </div>
-            <div class = "stats">
+            <div id = "stats">
                 <p>Games Played: ## <br> Games Won: ##</p>
             </div>
             <!-- End of Temporary Structure -->
@@ -65,7 +65,7 @@
     <Footer>
         <a href="../index.html">Return to table of contents</a>
     </Footer>
-    <script></script>
+    <script src="script.js" type = "module"></script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-.gameboard {
+#gameboard {
     border: 1px solid black;
     border-radius: 10px;
     height: 35em;
@@ -7,7 +7,7 @@
     background-color: #395b50;
     position: relative;
 }
-.gameboard > * {
+#gameboard > * {
     margin: auto 5%;
 }
 
@@ -18,7 +18,7 @@
     border-radius: 5px;
 }
 
-.goal {
+#goal {
     position: relative;
     top: 125px;
     display: flex;
@@ -30,21 +30,21 @@
     background-color: rgba(255, 255, 255, 0.5);
 } */
 
-.play {
+#play {
     position: relative;
     top: 150px;
     display: flex;
     justify-content: space-between;
 }
 
-.deck {
+#deck {
     position: absolute;
     top: 25px;
     display: flex;
     gap: 5%;
 }
 
-.controls {
+#controls {
     position: absolute;
     top: 25px;
     right: 25px;
@@ -54,8 +54,42 @@
     width: 100px;
 }
 
-.stats {
+#stats {
     position: absolute;
     bottom: 25px;
 
+}
+
+.alternate {
+
+        display: flex;
+        flex-direction: column;
+        /* justify-content: flex-start; */
+        height: 300px;
+      
+}
+
+.alternate .card-container {
+    flex: 1 0 0;
+  overflow: hidden;
+}
+.alternate .card-container:last-child {
+    flex: 0 0 auto;
+    background-color: red;
+
+}
+
+
+/* cards */
+.card {
+    width: 50px;
+    height: 70px;
+    border-radius: 5px;
+    background-color: antiquewhite; 
+
+    border: 1px solid black
+}
+
+.stacked {
+    position:absolute
 }
