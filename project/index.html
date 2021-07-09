@@ -19,7 +19,23 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#395b50">
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#395b50"> -->
+    <script>
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+            console.log(ev.target)
+        }
 
+        function allowDrop(ev) {
+            ev.preventDefault();
+
+        }
+
+        function drop(ev, el) {          
+            const dataitem = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(dataitem));
+            ev.preventDefault();
+        }
+    </script>
 </head>
 
 <body>
@@ -33,10 +49,10 @@
         <div id="gameboard">
             <!-- Temporary game board structure for solitare -->
             <div id="goal">
-                <div class="pile uniform">A</div>
-                <div class="pile uniform">B</div>
-                <div class="pile uniform">C</div>
-                <div class="pile uniform">D</div>
+                <div class="pile uniform" id=p1>A</div>
+                <div class="pile uniform" id=p2>B</div>
+                <div class="pile uniform" id=p3>C</div>
+                <div class="pile uniform" id=p4>D</div>
             </div>
             <div id="play">
                 <div class="pile alternate">1</div>
@@ -52,11 +68,12 @@
                 <div class="pile">Discard</div>
 
             </div> -->
-            <div id = "controls">
+            <div id="controls">
                 <input type="button" value="Save Game">
+                <input type="button" value="Load Game">
                 <input type="button" value="Reset Game">
             </div>
-            <div id = "stats">
+            <div id="stats">
                 <p>Games Played: ## <br> Games Won: ##</p>
             </div>
             <!-- End of Temporary Structure -->
@@ -65,7 +82,7 @@
     <Footer>
         <a href="../index.html">Return to table of contents</a>
     </Footer>
-    <script src="script.js" type = "module"></script>
+    <script src="script.js" type="module" defer></script>
 </body>
 
 </html>

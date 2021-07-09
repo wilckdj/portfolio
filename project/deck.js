@@ -76,20 +76,22 @@ function renderDeck(cards) {
     cards.forEach(item => {
         let cardElem = document.createElement('div');
         let cardContainer = document.createElement('div');
-        cardContainer.classList.add("card-container");
+        cardContainer.classList.add("card-container", "stacked");
         cardElem.setAttribute('id', item.name);
         cardElem.setAttribute('data-value', item.numValue);
         cardElem.setAttribute('data-color', item.color);
-        cardElem.setAttribute('draggable', true)
         cardElem.innerHTML = item.symbol;
-        cardElem.classList.add("card", "stacked")
+        cardElem.classList.add("card")
+        cardContainer.setAttribute('draggable', true)
+        cardContainer.setAttribute("ondragstart", 'drag(event)');
+        cardContainer.setAttribute('id',item.id)
 
-        console.log(cardElem)
+        // console.log(cardElem)
         cardContainer.appendChild(cardElem)
         draw.appendChild(cardContainer)
     }) 
-    document.createElement
-
+    // document.createElement
+    
 }
 
 function valueOrder(cards, high) {
@@ -112,3 +114,4 @@ function shuffleArray(array) {
     }
     return array
 }
+
