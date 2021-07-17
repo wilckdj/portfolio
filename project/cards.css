@@ -94,3 +94,10 @@
 .stacked {
     position: absolute
 }
+
+.card[data-color="red"] {
+    color: red;
+}
+.card[data-color="black"] {
+    color:black
+}

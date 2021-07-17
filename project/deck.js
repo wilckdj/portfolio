@@ -91,7 +91,7 @@ function renderDeck(cards) {
         draw.appendChild(cardContainer)
     }) 
     // document.createElement
-    
+       
 }
 
 function valueOrder(cards, high) {
