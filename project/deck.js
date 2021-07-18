@@ -48,14 +48,14 @@ export class Deck {
     }
 
     shuffle(cards) {
-        console.log(cards)
+        console.log("Shuffle")
         return shuffleArray(cards) 
     }
 
 }
 
 function renderDeck(cards) {
-    console.log(!document.getElementById("deck"));
+    // console.log(!document.getElementById("deck"));
     let gameboard = document.getElementById("gameboard");
 
     if (!document.getElementById("deck")) {
@@ -67,6 +67,7 @@ function renderDeck(cards) {
         deckElem.setAttribute('id', 'deck');
         draw.classList.add("pile");
         discard.classList.add("pile");
+        discard.setAttribute("data-house", "discard")
         deckElem.appendChild(draw);
         deckElem.appendChild(discard);
         gameboard.appendChild(deckElem);
@@ -75,20 +76,25 @@ function renderDeck(cards) {
 
     cards.forEach(item => {
         let cardElem = document.createElement('div');
-        let cardContainer = document.createElement('div');
-        cardContainer.classList.add("card-container", "stacked");
+        // let cardContainer = document.createElement('div');
+        // cardContainer.classList.add("card-container", "stacked");
         cardElem.setAttribute('id', item.name);
         cardElem.setAttribute('data-value', item.numValue);
         cardElem.setAttribute('data-color', item.color);
         cardElem.innerHTML = item.symbol;
-        cardElem.classList.add("card")
-        cardContainer.setAttribute('draggable', true)
-        cardContainer.setAttribute("ondragstart", 'drag(event)');
-        cardContainer.setAttribute('id',item.id)
+        cardElem.classList.add("card", "stacked")
+        // cardContainer.setAttribute('draggable', true)
+        // cardContainer.setAttribute("ondragstart", 'drag(event)');
+        // cardContainer.setAttribute('id',item.id)
+        cardElem.setAttribute('draggable', true);
+        cardElem.setAttribute("ondragstart", 'drag(event)');
+        cardElem.setAttribute("ondrop", "return false");
+        cardElem.setAttribute("ondragover", "return false");
 
         // console.log(cardElem)
-        cardContainer.appendChild(cardElem)
-        draw.appendChild(cardContainer)
+        // cardContainer.appendChild(cardElem)
+        // draw.appendChild(cardContainer)
+        draw.appendChild(cardElem)
     }) 
     // document.createElement
        

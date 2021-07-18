@@ -1,17 +1,18 @@
 /*drag and drop API*/
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
+// function drag(ev) {
+//     ev.dataTransfer.setData("text", ev.target.id);
 
-}
-function allowDrop(ev) {
-    ev.preventDefault();
-}
+// }
+// function allowDrop(ev) {
+//     ev.preventDefault();
+// }
 
-function drop(ev) {
-    ev.preventDefault();
-    const data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-}
+// function drop(ev, el) {
+//     ev.preventDefault();
+//     let data = ev.dataTransfer.getData("text");
+//     console.log(el)
+//     el.appendChild(document.getElementById(data));
+// }
 
 
 
@@ -25,4 +26,5 @@ function flip(cardElem) {
 }
 
 
-export {drag, drop, allowDrop, flip};
+export { flip};
+// drag, drop, allowDrop,
