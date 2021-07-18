@@ -11,7 +11,6 @@ function allowDrop(ev) {
 
 function drop(ev, el, rules) {
     ev.preventDefault();
-
     switch (rules) {
         case "solitaire":
             solitaire.allowMove(ev, el);
@@ -43,7 +42,6 @@ function drop(ev, el, rules) {
 */
 
 function flip(cardElem, flipper) {
-    console.log("I flipped")
     if (flipper == true) {
         cardElem.classList.toggle("facedown")
     } else {

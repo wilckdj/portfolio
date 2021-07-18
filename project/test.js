@@ -23,6 +23,6 @@
 //   dragged.setAttribute('draggable', true)
 // dragged.setAttribute('ondragstart', 'drag(event)')
 
-let card = document.querySelector(".card")
+let card = document.querySelector(".card-container")
 console.log(card)
-card.addEventListener('dblclick', ()=> {card.classList.toggle("is-flipped")})
+card.addEventListener('dblclick', ()=> {card.classList.toggle("facedown")})

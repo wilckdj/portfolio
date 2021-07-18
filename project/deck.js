@@ -18,7 +18,7 @@ export class Deck {
     }
 
     async build() {
-        console.log(this.high + " " + this.count + " " + this.joker)
+        console.log("Deck Rules: " + this.high + " " + this.count + " " + this.joker)
         let cards = await fetch(cardsJSON)
             .then(function (response) {
                 return response.json();
@@ -51,7 +51,6 @@ export class Deck {
     }
 
     shuffle(cards) {
-        console.log("Shuffle")
         return shuffleArray(cards) 
     }
 
@@ -79,28 +78,70 @@ function renderDeck(cards) {
 
     cards.forEach(item => {
         let cardElem = document.createElement('div');
-        // let cardContainer = document.createElement('div');
-        // cardContainer.classList.add("card-container", "stacked");
-        cardElem.setAttribute('id', item.name);
-        cardElem.setAttribute('data-value', item.numValue);
-        cardElem.setAttribute('data-color', item.color);
         cardElem.innerHTML = item.symbol;
-        cardElem.classList.add("card", "stacked", "facedown")
-        
-        cardElem.addEventListener('dblclick', () => {move.flip(cardElem, false)})
-        // cardContainer.setAttribute('draggable', true)
-        // cardContainer.setAttribute("ondragstart", 'drag(event)');
-        // cardContainer.setAttribute('id',item.id)
-        cardElem.setAttribute('draggable', true);
-        cardElem.addEventListener("dragstart", () => {move.drag(event)})
-        cardElem.setAttribute("ondrop", "return false");
-        cardElem.setAttribute("ondragover", "return false");
+        cardElem.classList.add("card", "face")
+
+        let cardBack = document.createElement('div');
+        cardBack.classList.add("card","back");
+        cardBack.innerHTML = "Double Click";
+
+        let cardBlock = document.createElement('div');
+        cardBlock.classList.add("card", "block")
+
+        let cardContainer = document.createElement('div');
+        cardContainer.classList.add("card-container", "stacked", "facedown");
+        // cardElem.setAttribute('id', item.id);
+        cardContainer.setAttribute('id', item.name)
+        cardContainer.setAttribute('data-value', item.numValue);
+        cardContainer.setAttribute('data-color', item.color);
+        cardContainer.addEventListener('dblclick', () => {move.flip(cardContainer, true)})
+        cardContainer.setAttribute('draggable', true);
+        cardContainer.addEventListener("dragstart", () => {move.drag(event)})
+        cardContainer.setAttribute("ondrop", "return false");
+        cardContainer.setAttribute("ondragover", "return false");
 
         // console.log(cardElem)
-        // cardContainer.appendChild(cardElem)
-        // draw.appendChild(cardContainer)
-        draw.appendChild(cardElem)
+        cardContainer.appendChild(cardBack);
+        cardContainer.appendChild(cardElem);
+        cardContainer.appendChild(cardBlock);
+
+        draw.appendChild(cardContainer)
+        // draw.appendChild(cardElem)
     }) 
+
+
+
+// ''BACKUP
+    // cards.forEach(item => {
+    //     let cardElem = document.createElement('div');
+    //     // let cardContainer = document.createElement('div');
+    //     // cardContainer.classList.add("card-container", "stacked");
+    //     cardElem.setAttribute('id', item.name);
+    //     cardElem.setAttribute('data-value', item.numValue);
+    //     cardElem.setAttribute('data-color', item.color);
+    //     cardElem.innerHTML = item.symbol;
+    //     cardElem.classList.add("card", "stacked", "facedown")
+        
+    //     cardElem.addEventListener('dblclick', () => {move.flip(cardElem, false)})
+    //     // cardContainer.setAttribute('draggable', true)
+    //     // cardContainer.setAttribute("ondragstart", 'drag(event)');
+    //     // cardContainer.setAttribute('id',item.id)
+    //     cardElem.setAttribute('draggable', true);
+    //     cardElem.addEventListener("dragstart", () => {move.drag(event)})
+    //     cardElem.setAttribute("ondrop", "return false");
+    //     cardElem.setAttribute("ondragover", "return false");
+
+    //     // console.log(cardElem)
+    //     // cardContainer.appendChild(cardElem)
+    //     // draw.appendChild(cardContainer)
+    //     draw.appendChild(cardElem)
+    // }) 
+
+
+
+
+
+
     // document.createElement
        
 }
