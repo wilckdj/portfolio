@@ -1,30 +1,64 @@
+import * as solitaire from "./solitaire.js";
+
 /*drag and drop API*/
-// function drag(ev) {
-//     ev.dataTransfer.setData("text", ev.target.id);
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
 
-// }
-// function allowDrop(ev) {
-//     ev.preventDefault();
-// }
+function allowDrop(ev) {
+    ev.preventDefault();
+}
 
-// function drop(ev, el) {
-//     ev.preventDefault();
-//     let data = ev.dataTransfer.getData("text");
-//     console.log(el)
-//     el.appendChild(document.getElementById(data));
-// }
+function drop(ev, el, rules) {
+    ev.preventDefault();
 
-
-
-
-
-/*click to move funtionality as backup for drag and drop*/
-
-
-function flip(cardElem) {
-    cardElem.classList.toggle("faceDown")
+    switch (rules) {
+        case "solitaire":
+            solitaire.allowMove(ev, el);
+            break;
+        // case "yukon":
+        //     yukon.allowMove(ev, el);
+        //     break;
+        // case "spider":
+        //     spider.allowMove(ev, el);
+        //     break;
+        // case "freecell":
+        //     freecell.allowMove(ev, el);
+        //     break;
+        // case...
+        default:
+            let data = ev.dataTransfer.getData("text");
+            let card = document.getElementById(data)
+            el.appendChild(card);
+            break;
+    }
 }
 
 
-export { flip};
-// drag, drop, allowDrop,
+
+
+/*click to move funtionality as backup for drag and drop
+
+
+*/
+
+function flip(cardElem, flipper) {
+    console.log("I flipped")
+    if (flipper == true) {
+        cardElem.classList.toggle("facedown")
+    } else {
+        if (cardElem.classList.contains("facedown")) {
+            cardElem.classList.remove("facedown");
+        }
+    }
+}
+
+
+
+
+export {
+    drag,
+    drop,
+    allowDrop,
+    flip
+};

@@ -93,7 +93,6 @@
 
 .stacked {
     position: absolute;
-
 }
 
 
@@ -102,4 +101,9 @@
 }
 .card[data-color="black"] {
     color:black
+}
+
+.card.facedown {
+    background-color: Gray;
+
 }

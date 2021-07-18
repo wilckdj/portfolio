@@ -19,59 +19,7 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#395b50">
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#395b50"> -->
-    <script>
-        function drag(ev) {
-            ev.dataTransfer.setData("text", ev.target.id);
-        }
-
-        function allowDrop(ev) {
-            ev.preventDefault();
-        }
-
-        function drop(ev, el) {
-            // console.log(ev.target)
-            ev.preventDefault();
-            let data = ev.dataTransfer.getData("text");
-            let card = document.getElementById(data)
-            let cardtype = data.split(" ").pop().toLowerCase()
-            let piletype = el.dataset.house
-            let cardvalue = parseInt(card.dataset.value)
-            let pilevalue 
-            let cardcolor = card.dataset.color;
-            let pilecolor
-            try {
-                pilevalue = parseInt(el.lastElementChild.dataset.value)
-            } catch {
-                if (piletype == "all") {
-                    pilevalue = 14
-                } else {
-                    pilevalue = 0
-                }
-            }
-            try {
-                pilecolor = el.lastElementChild.dataset.color
-            } catch {
-                pilecolor = "none"
-            }
-
-            console.log("card " + cardvalue)
-            console.log("pile " + pilevalue)
-
-            // type = type.toLowerCase
-
-            if (cardtype == piletype && cardvalue == (pilevalue + 1)) {
-                el.appendChild(card);
-            } else if (piletype == "all" && cardvalue == (pilevalue - 1) && pilecolor !== cardcolor) {
-                el.appendChild(card);
-                console.log("pile color " + pilecolor)
-                console.log("card color "+cardcolor )
-            } else if (piletype == "discard") {
-                el.appendChild(card);
-            }
-
-
-        }
-    </script>
+    <script></script>
 </head>
 
 <body>

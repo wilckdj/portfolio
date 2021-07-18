@@ -1,5 +1,8 @@
+import * as move from "./move.js";
+
 const cardsJSON = 'deck.json'
 let cardOrder = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+
 export class Deck {
     /**
      * @param {string} high - The symbol of the highest card value for the game being played. Default is "A"
@@ -82,12 +85,14 @@ function renderDeck(cards) {
         cardElem.setAttribute('data-value', item.numValue);
         cardElem.setAttribute('data-color', item.color);
         cardElem.innerHTML = item.symbol;
-        cardElem.classList.add("card", "stacked")
+        cardElem.classList.add("card", "stacked", "facedown")
+        
+        cardElem.addEventListener('dblclick', () => {move.flip(cardElem, false)})
         // cardContainer.setAttribute('draggable', true)
         // cardContainer.setAttribute("ondragstart", 'drag(event)');
         // cardContainer.setAttribute('id',item.id)
         cardElem.setAttribute('draggable', true);
-        cardElem.setAttribute("ondragstart", 'drag(event)');
+        cardElem.addEventListener("dragstart", () => {move.drag(event)})
         cardElem.setAttribute("ondrop", "return false");
         cardElem.setAttribute("ondragover", "return false");
 
