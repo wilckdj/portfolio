@@ -1,12 +1,102 @@
 /* Build the Card Table Layout */
 
+import { resetDeck } from "./move.js";
+
+function buildGameBoard() {
+    let gameboard = document.getElementById("gameboard");
+
+    if (!document.getElementById("deck")) {
+        let deckElem = document.createElement("div");
+        let draw = document.createElement("div");
+        let discard = document.createElement("div");
+        draw.setAttribute('id', 'draw')
+        discard.setAttribute('id','discard')
+        deckElem.setAttribute('id', 'deck');
+        draw.classList.add("pile");
+        discard.classList.add("pile");
+        discard.setAttribute("data-house", "discard")
+        deckElem.appendChild(draw);
+        deckElem.appendChild(discard);
+        gameboard.appendChild(deckElem);
+
+        draw.addEventListener('dblclick', () => {
+            if (draw.childNodes.length == 0){
+                resetDeck()
+            }
+        })
+    }
+
+    if (!document.getElementById("goal")) {
+        let goalElem = document.createElement("div");
+        goalElem.setAttribute('id', 'goal');
+
+        let p1 = document.createElement("div");
+        let p2 = document.createElement("div");
+        let p3 = document.createElement("div");
+        let p4 = document.createElement("div");
+        p1.setAttribute('id', 'p1')
+        p2.setAttribute('id', 'p2')
+        p3.setAttribute('id', 'p3')
+        p4.setAttribute('id', 'p4')
+        p1.classList.add("pile", "uniform")
+        p2.classList.add("pile", "uniform")
+        p3.classList.add("pile", "uniform")
+        p4.classList.add("pile", "uniform")
+        p1.setAttribute("data-house", "hearts")
+        p2.setAttribute("data-house", "spades")
+        p3.setAttribute("data-house", "diamonds")
+        p4.setAttribute("data-house", "clubs")
+
+        goalElem.appendChild(p1);
+        goalElem.appendChild(p2);
+        goalElem.appendChild(p3);
+        goalElem.appendChild(p4);
+
+        gameboard.appendChild(goalElem);
+    }
+
+    if (!document.getElementById("play")) {
+        let playElem = document.createElement("div");
+        playElem.setAttribute('id', 'play');
+
+        for (let i = 1; i <= 7; i++) {
+            let pile = document.createElement("div");
+            pile.classList.add("pile", "alternate");
+            pile.setAttribute("data-house", "all")
+            playElem.appendChild(pile);
+            console.log(pile)
+        }
+
+        gameboard.appendChild(playElem);
+    }
+
+}
+
 /* Build the deck with correct parameters */
+
+function placeCards(cards) {
+        let piles = document.querySelectorAll('.alternate')
+        let deck = document.getElementById('draw').childNodes
+
+        for (let i = 0; i < 7; i++) {
+            for (let x = 0; x <= i; x++) {
+                deck[x].style.top = `${x*2}0px`
+                if (x == i) {
+                    deck[x].classList.remove('facedown')
+                }
+                piles[i].insertAdjacentElement('beforeend', deck[x])
+            }
+    }
+
+}
 
 /* Rules for Drop Function */
 
 function allowMove(ev, el) {
     let data = ev.dataTransfer.getData("text");
     let card = document.getElementById(data)
+    let cardStack = card.style.top
+    let offset = 0
     // let card = cardContainer.childNodes[0]
     let cardtype = data.split(" ").pop().toLowerCase()
     let piletype = el.dataset.house
@@ -15,7 +105,15 @@ function allowMove(ev, el) {
     let cardcolor = card.dataset.color;
     let pilecolor
 
-// console.log(data +" " + card.dataset.value)
+    try {
+        offset = parseInt(el.lastElementChild.style.top, 10)
+        console.log(offset)
+        
+    } catch {
+        offset = 0
+    }
+    console.log(offset)
+    // console.log(data +" " + card.dataset.value)
 
     try {
         pilevalue = parseInt(el.lastElementChild.dataset.value)
@@ -41,14 +139,26 @@ function allowMove(ev, el) {
             el.appendChild(card);
         } else if (piletype == "all" && cardvalue == (pilevalue - 1) && pilecolor !== cardcolor) {
             el.appendChild(card);
+            if (pilevalue == 14) {
+                card.style.top = `${offset}px`
+            } else {
+                card.style.top = `${offset+20}px`
+            }
+            
         } else if (piletype == "discard") {
             el.appendChild(card);
+            card.style.top = 0
         }
     }
 
 
 }
 
+const flipper = false
+
 export {
-    allowMove
+    allowMove,
+    flipper,
+    buildGameBoard,
+    placeCards
 }

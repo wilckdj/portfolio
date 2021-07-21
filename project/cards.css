@@ -19,6 +19,23 @@
     border-radius: 5px;
 }
 
+.pile[data-house = "hearts"] {
+    background: url(images/heart.svg) no-repeat center;
+    background-size: contain;
+}
+.pile[data-house = "spades"] {
+    background: url(images/spade.svg) no-repeat center;
+    background-size: contain;
+}
+.pile[data-house = "diamonds"] {
+    background: url(images/diamond.svg) no-repeat center;
+    background-size: contain;
+}
+.pile[data-house = "clubs"] {
+    background: url(images/club.svg) no-repeat center;
+    background-size: contain;
+}
+
 #goal {
     position: relative;
     top: 125px;
@@ -83,11 +100,10 @@
 
 
 /* cards */
-.card {
+.card-container >* {
     /* width: 50px;
     height: 70px; */
     border-radius: 5px;
-
     border: 1px solid black
 }
 
@@ -96,10 +112,10 @@
 }
 
 
-.card[data-color="red"] {
+.card-container[data-color="red"] {
     color: red;
 }
-.card[data-color="black"] {
+.card-container[data-color="black"] {
     color:black
 }
 
@@ -126,6 +142,10 @@
   .back {
     background: gray;
     transform: rotateY( 180deg );
+  }
+  .backImg {
+      width: 100%;
+      border-radius: 5px;
   }
 
   .card-container.facedown {
