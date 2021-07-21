@@ -11,7 +11,6 @@ gameboard.renderGameboard()
 
 let deck = new Deck("K", 52, false, "standard.png")
 let cards = await deck.build()
-console.log(cards)
 
 await gameboard.setupCards()
 let piles = document.querySelectorAll(".pile")

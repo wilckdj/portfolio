@@ -15,7 +15,7 @@ export class GameBoard {
     renderGameboard() {
         switch (this.gamerules) {
             case "solitaire":
-                console.log(this.gamerules)
+
                 solitaire.buildGameBoard();
                 break;
             // case "yukon":
@@ -35,7 +35,6 @@ export class GameBoard {
     setupCards() {
         switch (this.gamerules) {
             case "solitaire":
-                console.log(this.gamerules)
                 solitaire.placeCards();
                 break;
             // case "yukon":

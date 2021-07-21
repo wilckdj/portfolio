@@ -1,4 +1,6 @@
-import { gamerules } from "./script.js";
+import {
+    gamerules
+} from "./script.js";
 import * as solitaire from "./solitaire.js";
 
 
@@ -45,33 +47,38 @@ function drop(ev, el, rules) {
 
 */
 let flipper
+
 function flip(cardElem, rules) {
-    switch (rules) {
-        case "solitaire":
-            flipper = solitaire.flipper
-            break;
-            // case "yukon":
-            //     flipper = solitaire.flipper
-            //     break;
-            // case "spider":
-            //     flipper = solitaire.flipper
-            //     break;
-            // case "freecell":
-            //     flipper = solitaire.flipper
-            //     break;
-            // case ...
-        default:
-            flipper = true
-            break
-    }
-    if (flipper == true) {
-        cardElem.classList.toggle("facedown")
-    } else {
-        if (cardElem.classList.contains("facedown")) {
-            cardElem.classList.remove("facedown");
+    let pile = cardElem.parentElement
+    if (cardElem == pile.lastChild) {
+
+
+        switch (rules) {
+            case "solitaire":
+                flipper = solitaire.flipper
+                break;
+                // case "yukon":
+                //     flipper = solitaire.flipper
+                //     break;
+                // case "spider":
+                //     flipper = solitaire.flipper
+                //     break;
+                // case "freecell":
+                //     flipper = solitaire.flipper
+                //     break;
+                // case ...
+            default:
+                flipper = true
+                break
+        }
+        if (flipper == true) {
+            cardElem.classList.toggle("facedown")
+        } else {
+            if (cardElem.classList.contains("facedown")) {
+                cardElem.classList.remove("facedown");
+            }
         }
     }
-
 
 
 }

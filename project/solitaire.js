@@ -64,7 +64,6 @@ function buildGameBoard() {
             pile.classList.add("pile", "alternate");
             pile.setAttribute("data-house", "all")
             playElem.appendChild(pile);
-            console.log(pile)
         }
 
         gameboard.appendChild(playElem);
@@ -107,12 +106,12 @@ function allowMove(ev, el) {
 
     try {
         offset = parseInt(el.lastElementChild.style.top, 10)
-        console.log(offset)
+
         
     } catch {
         offset = 0
     }
-    console.log(offset)
+
     // console.log(data +" " + card.dataset.value)
 
     try {
