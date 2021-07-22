@@ -90,7 +90,6 @@ function buildGameBoard() {
 /* Build the deck with correct parameters */
 
 function placeCards(cards) {
-    console.log("PlaceCards")
     let piles = document.querySelectorAll('.alternate')
     let deck = document.getElementById('draw').childNodes
 

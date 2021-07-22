@@ -59,8 +59,12 @@ function loadGame() {
     console.log("Game Reloaded from Save")
     let gameboard = document.getElementById("gameboard")
     let data = readFromLS('Save')
-    gameboard.innerHTML = data
-    redoListeners()
+    if (data) {
+        gameboard.innerHTML = data
+        redoListeners()
+    }
+    
+    
 
 }
 
