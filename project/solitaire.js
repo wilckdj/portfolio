@@ -87,8 +87,6 @@ function buildGameBoard() {
 
 }
 
-/* Build the deck with correct parameters */
-
 function placeCards(cards) {
     let piles = document.querySelectorAll('.alternate')
     let deck = document.getElementById('draw').childNodes
@@ -212,28 +210,6 @@ function gameGoal() {
         bubbles: true
     });
 
-    // // for (let i = 0; i < goal.length; i++) {
-    // //     goal[i].addEventListener('drop', e => {
-    // //         console.log(goal[i].lastElementChild.dataset.value)
-    // //         e.target.dispatchEvent(gamecheck)
-    // //     })
-    // // }
-    // gameboard.addEventListener('stacked', () => {
-    //     console.log("help me")
-
-    //     // for (let i = 0; i < goal.length; i++) {
-    //     //     try {
-    //     //         console.log(`${goal[i].children.length}`)
-    //     //         // console.log(el.lastElementChild.dataset.value)
-    //     //     } catch {
-    //     //         console.log(0)
-    //     //     }
-
-
-    //     // }
-
-
-    // })
 }
 
 function onAppend(elem, callback) {

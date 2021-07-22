@@ -6,10 +6,6 @@ import {
 import * as move from "./move.js";
 import { gameGoal } from "./solitaire.js";
 
-
-
-
-
 /*Read the score record from local storage*/
 function readScore() {
     let games = parseInt(readFromLS("Plays"), 10)
@@ -23,7 +19,6 @@ function readScore() {
     }
     document.getElementById("stats").innerHTML = `<p>Games Played: ${games} <br> Games Won: ${score}</p>`
 }
-
 
 /*Write the score to local storage */
 
@@ -46,8 +41,6 @@ function updateScore() {
     readScore()
 }
 
-/* backup the gameboard to localstorage */
-
 /* intentionally save the gameboard to localstorage */
 
 function saveGame() {
@@ -64,8 +57,6 @@ function loadGame() {
         gameboard.innerHTML = data
         redoListeners()
     }
-    
-    
 
 }
 

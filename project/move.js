@@ -1,10 +1,4 @@
-import {
-    gamerules
-} from "./script.js";
 import * as solitaire from "./solitaire.js";
-
-
-
 
 /*drag and drop API*/
 function drag(ev) {
@@ -40,19 +34,11 @@ function drop(ev, el, rules) {
 }
 
 
-
-
-/*click to move funtionality as backup for drag and drop
-
-
-*/
 let flipper
 
 function flip(cardElem, rules) {
     let pile = cardElem.parentElement
     if (cardElem == pile.lastChild) {
-
-
         switch (rules) {
             case "solitaire":
                 flipper = solitaire.flipper
@@ -79,10 +65,7 @@ function flip(cardElem, rules) {
             }
         }
     }
-
-
 }
-
 
 function resetDeck() {
     let discard = document.getElementById('discard').childNodes
@@ -93,7 +76,6 @@ function resetDeck() {
         deck.insertAdjacentElement('afterbegin', discard[0])
     }
 }
-
 
 export {
     drag,

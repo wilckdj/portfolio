@@ -54,37 +54,4 @@ async function gameStart(high, count, joker, cardImg, gamerules) {
     }
 }
 
-// let gamerules = "solitaire"
-// let cardImg = "standard.png"
-
-// let gameboard = new GameBoard(gamerules)
-// gameboard.renderGameboard()
-
-// let deck = new Deck("K", 52, false, "standard.png")
-// let cards = await deck.build()
-
-// await gameboard.setupCards()
-// await gameboard.setGoal()
-// let piles = document.querySelectorAll(".pile")
-
-// for (let i = 0; i < piles.length; i++) {
-//     piles[i].addEventListener("drop", () => {move.drop(event, piles[i], gamerules)});
-//     piles[i].addEventListener("dragover", () => {move.allowDrop(event)});
-// }
-
-// let savebtn = document.getElementById("save")
-// savebtn.addEventListener('click', saveGame)
-// let loadbtn = document.getElementById("load")
-// loadbtn.addEventListener('click', loadGame)
-
-
-
-// readScore()
-// updatePlays()
-
-
-// if (gamerules == "") {
-//     console.log("No Game Rules were selected.")
-// }
-
 export {gamerules}
