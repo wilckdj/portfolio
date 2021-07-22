@@ -74,16 +74,16 @@ function buildGameBoard() {
         gameboard.appendChild(playElem);
     }
 
-    if(!document.getElementById('controls')) {
+    if (!document.getElementById('controls')) {
         let controlElem = document.createElement('div');
-        controlElem.setAttribute('id',"controls")
+        controlElem.setAttribute('id', "controls")
         controlElem.innerHTML = `<input type="button" value="Save Game" id="save">
         <input type="button" value="Load Game" id="load">
         `
         gameboard.appendChild(controlElem)
     }
 
-    
+
 
 }
 
@@ -93,13 +93,13 @@ function placeCards(cards) {
 
     for (let i = 0; i < 7; i++) {
         for (let x = 0; x <= i; x++) {
-             
-            try{
+
+            try {
                 deck[x].style.top = `${x*2}0px`
-            }catch{
+            } catch {
 
             }
-            
+
             if (x == i) {
                 deck[x].classList.remove('facedown')
             }
@@ -182,7 +182,7 @@ function gameGoal() {
     goals.addEventListener("stacked", () => {
         let cardCount = 0
         for (let i = 0; i < goal.length; i++) {
-            
+
 
             if (goal[i].children.length == 13) {
                 cardCount = cardCount + 13

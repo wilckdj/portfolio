@@ -4,7 +4,9 @@ import {
     gamerules
 } from "./script.js"
 import * as move from "./move.js";
-import { gameGoal } from "./solitaire.js";
+import {
+    gameGoal
+} from "./solitaire.js";
 
 /*Read the score record from local storage*/
 function readScore() {
