@@ -1,6 +1,11 @@
 /* Build the Card Table Layout */
 
-import { resetDeck } from "./move.js";
+import {
+    resetDeck
+} from "./move.js";
+import {
+    updateScore
+} from "./score.js";
 
 function buildGameBoard() {
     let gameboard = document.getElementById("gameboard");
@@ -10,7 +15,7 @@ function buildGameBoard() {
         let draw = document.createElement("div");
         let discard = document.createElement("div");
         draw.setAttribute('id', 'draw')
-        discard.setAttribute('id','discard')
+        discard.setAttribute('id', 'discard')
         deckElem.setAttribute('id', 'deck');
         draw.classList.add("pile");
         discard.classList.add("pile");
@@ -20,7 +25,7 @@ function buildGameBoard() {
         gameboard.appendChild(deckElem);
 
         draw.addEventListener('dblclick', () => {
-            if (draw.childNodes.length == 0){
+            if (draw.childNodes.length == 0) {
                 resetDeck()
             }
         })
@@ -74,17 +79,17 @@ function buildGameBoard() {
 /* Build the deck with correct parameters */
 
 function placeCards(cards) {
-        let piles = document.querySelectorAll('.alternate')
-        let deck = document.getElementById('draw').childNodes
+    let piles = document.querySelectorAll('.alternate')
+    let deck = document.getElementById('draw').childNodes
 
-        for (let i = 0; i < 7; i++) {
-            for (let x = 0; x <= i; x++) {
-                deck[x].style.top = `${x*2}0px`
-                if (x == i) {
-                    deck[x].classList.remove('facedown')
-                }
-                piles[i].insertAdjacentElement('beforeend', deck[x])
+    for (let i = 0; i < 7; i++) {
+        for (let x = 0; x <= i; x++) {
+            deck[x].style.top = `${x*2}0px`
+            if (x == i) {
+                deck[x].classList.remove('facedown')
             }
+            piles[i].insertAdjacentElement('beforeend', deck[x])
+        }
     }
 
 }
@@ -97,6 +102,7 @@ function allowMove(ev, el) {
     let cardStack = card.style.top
     let offset = 0
     // let card = cardContainer.childNodes[0]
+    console.log(ev)
     let cardtype = data.split(" ").pop().toLowerCase()
     let piletype = el.dataset.house
     let cardvalue = parseInt(card.dataset.value)
@@ -107,7 +113,7 @@ function allowMove(ev, el) {
     try {
         offset = parseInt(el.lastElementChild.style.top, 10)
 
-        
+
     } catch {
         offset = 0
     }
@@ -136,21 +142,96 @@ function allowMove(ev, el) {
     if (card.classList.contains("facedown") == false) {
         if (cardtype == piletype && cardvalue == (pilevalue + 1)) {
             el.appendChild(card);
-        } else if (piletype == "all" && cardvalue == (pilevalue - 1) && pilecolor !== cardcolor) {
+            card.style.top = `${offset}px`
+        } else if ((piletype == "all" && cardvalue == (pilevalue - 1) && pilecolor !== cardcolor) || pilevalue == 14) {
             el.appendChild(card);
             if (pilevalue == 14) {
                 card.style.top = `${offset}px`
             } else {
                 card.style.top = `${offset+20}px`
             }
-            
+
         } else if (piletype == "discard") {
             el.appendChild(card);
-            card.style.top = 0
+            card.style.top = '0px'
         }
     }
 
 
+
+}
+
+function gameGoal() {
+
+    let goals = document.getElementById("goal")
+
+    let goal = goals.children
+    goals.addEventListener("stacked", () => {
+        let cardCount = 0
+        for (let i = 0; i < goal.length; i++) {
+            
+
+            if (goal[i].children.length == 13) {
+                cardCount = cardCount + 13
+                console.log(cardCount)
+            }
+            if (cardCount == 52) {
+                alert("You Win!")
+                updateScore()
+            }
+        }
+
+
+
+    })
+
+    for (let i = 0; i < goal.length; i++) {
+        onAppend(goal[i], function (added) {
+            if (goal[i].children.length == 13) {
+                goal[i].dispatchEvent(gamecheck)
+            }
+
+        })
+    }
+    const gamecheck = new CustomEvent("stacked", {
+        bubbles: true
+    });
+
+    // // for (let i = 0; i < goal.length; i++) {
+    // //     goal[i].addEventListener('drop', e => {
+    // //         console.log(goal[i].lastElementChild.dataset.value)
+    // //         e.target.dispatchEvent(gamecheck)
+    // //     })
+    // // }
+    // gameboard.addEventListener('stacked', () => {
+    //     console.log("help me")
+
+    //     // for (let i = 0; i < goal.length; i++) {
+    //     //     try {
+    //     //         console.log(`${goal[i].children.length}`)
+    //     //         // console.log(el.lastElementChild.dataset.value)
+    //     //     } catch {
+    //     //         console.log(0)
+    //     //     }
+
+
+    //     // }
+
+
+    // })
+}
+
+function onAppend(elem, callback) {
+    const observer = new MutationObserver(mutations => {
+        mutations.forEach(m => {
+            if (m.type === 'childList') {
+                callback(m.addedNodes)
+            }
+        })
+    })
+    observer.observe(elem, {
+        childList: true
+    })
 }
 
 const flipper = false
@@ -159,5 +240,6 @@ export {
     allowMove,
     flipper,
     buildGameBoard,
-    placeCards
+    placeCards,
+    gameGoal
 }

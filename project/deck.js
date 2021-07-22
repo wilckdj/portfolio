@@ -51,6 +51,25 @@ export class GameBoard {
         }
     }
 
+    setGoal() {
+        switch (this.gamerules) {
+            case "solitaire":
+                solitaire.gameGoal();
+                break;
+            // case "yukon":
+            //     solitaire.buildGameBoard;
+            //     break;
+            // case "spider":
+            //     solitaire.buildGameBoard;
+            //     break;
+            // case "freecell":
+            //     solitaire.buildGameBoard;
+            //     break;
+            // case...
+            //      break;
+        }
+    }
+
 }
     export class Deck {
         /**
@@ -100,7 +119,7 @@ export class GameBoard {
                 card.design = this.design;
             })
 
-            this.shuffle(cards)
+            // this.shuffle(cards)
             renderDeck(cards);
             return cards
         }
