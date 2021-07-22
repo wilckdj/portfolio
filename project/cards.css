@@ -13,7 +13,7 @@
 }
 
 .pile {
-    border: 1px dotted gray;
+    border: 1px dotted darkgreen;
     min-width: 50px;
     min-height: 70px;
     border-radius: 5px;
