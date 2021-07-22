@@ -4,7 +4,7 @@
     height: 35em;
     width: 80%;
     margin: auto;
-    background-color: #395b50;
+    background-color: #4f7468;
     position: relative;
 }
 
@@ -44,9 +44,6 @@
     width: 40%;
 }
 
-/* .goal > .pile{
-    background-color: rgba(255, 255, 255, 0.5);
-} */
 
 #play {
     position: relative;
@@ -78,25 +75,6 @@
 
 }
 
-/* .alternate {
-
-    display: flex;
-    flex-direction: column;
-    
-    height: 300px;
-
-}
-
-.alternate .card-container {
-    flex: 1 0 0;
-    overflow: hidden;
-}
-
-.alternate .card-container:last-child {
-    flex: 0 0 auto;
-    background-color: red;
-
-} */
 
 
 /* cards */
@@ -157,3 +135,16 @@
       height: 100%;
       background-color: black;
   }
+
+#gameMenu  {
+    width: 200px;
+    height: 200px;
+    align-self: center;  
+    margin: 10% auto;
+  }
+#gameMenu form > div > label > select {
+    width: 100%;
+}
+#gameMenu form > div > label  {
+    font-weight: bold;
+}

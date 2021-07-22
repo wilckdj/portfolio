@@ -74,17 +74,35 @@ function buildGameBoard() {
         gameboard.appendChild(playElem);
     }
 
+    if(!document.getElementById('controls')) {
+        let controlElem = document.createElement('div');
+        controlElem.setAttribute('id',"controls")
+        controlElem.innerHTML = `<input type="button" value="Save Game" id="save">
+        <input type="button" value="Load Game" id="load">
+        `
+        gameboard.appendChild(controlElem)
+    }
+
+    
+
 }
 
 /* Build the deck with correct parameters */
 
 function placeCards(cards) {
+    console.log("PlaceCards")
     let piles = document.querySelectorAll('.alternate')
     let deck = document.getElementById('draw').childNodes
 
     for (let i = 0; i < 7; i++) {
         for (let x = 0; x <= i; x++) {
-            deck[x].style.top = `${x*2}0px`
+             
+            try{
+                deck[x].style.top = `${x*2}0px`
+            }catch{
+
+            }
+            
             if (x == i) {
                 deck[x].classList.remove('facedown')
             }
@@ -156,8 +174,6 @@ function allowMove(ev, el) {
             card.style.top = '0px'
         }
     }
-
-
 
 }
 

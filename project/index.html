@@ -33,19 +33,66 @@
     <main>
         <h2 class="mainTitle">Final Project</h2>
         <div id="gameboard">
-            <!-- <div id="deck">
-                <div class="pile" id = "draw">Deck</div>
-                <div class="pile">Discard</div>
+            <div id="gameMenu">
+                <form>
+                    <div>
+                        <label for="gamerules"> Game Type:
+                            <select name="gamerules" id="gamerules">
+                                <option value="solitaire">Basic Solitaire</option>
+                                <option value="yukon" disabled>Yukon Solitaire</option>
+                                <option value="spider" disabled>Spider Solitaire</option>
+                                <option value="freecell" disabled>Freecell Solitaire</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="high"> High Card Value:
+                            <select name="high" id="high">
+                                <option value="K">Kings are high</option>
+                                <option value="A">Aces are high</option>
+                                <option value="2">Twos are high</option>
+                                <option value="3">Threes are high</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="count"> Number of Cards Used:
+                            <select name="count" id="count">
+                                <option value="52">52 Cards (All Cards)</option>
+                                <option value="40" disabled>40 Cards (No Face Cards)</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="joker-false">
+                            <input type="radio" name="joker" value="false" id="joker-false" checked>
+                            Exclude Jokers
+                        </label>
+                    </div>
+                    <div>
+                        <label for="joker-true">
+                            <input type="radio" name="joker" value="true" id="joker-true" disabled>
+                            Use Jokers
+                        </label>
+                    </div>
+                    <div>
+                        <label for="cardImg"> Card Design:
+                            <select name="cardImg" id="cardImg">
+                                <option value="standard.png">Standard Cards</option>
+                                <option value="CardBackRed.png">Red Cards</option>
+                            </select>
+                        </label>
+                    </div>
 
-            </div> -->
-            <div id="controls">
-                <input type="button" value="Save Game" id="save">
-                <input type="button" value="Load Game" id="load">
+                    <button type="button" id="subButton">Start Game</button>
+                </form>
+                <div id="token-display"></div>
             </div>
+
             <div id="stats">
                 <p>Games Played: ## <br> Games Won: ##</p>
             </div>
-            <!-- End of Temporary Structure -->
+
         </div>
     </main>
     <Footer>
