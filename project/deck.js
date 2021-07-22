@@ -119,7 +119,7 @@ export class Deck {
             card.design = this.design;
         })
 
-        // this.shuffle(cards)
+        this.shuffle(cards)
         renderDeck(cards);
         return cards
     }
